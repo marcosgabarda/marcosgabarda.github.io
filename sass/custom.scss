@@ -1,0 +1,13 @@
+/* Customization of the theme */
+:root {
+  /* Fonts */
+  --text-font: 'Hack Mono';
+}
+
+:root.dark { 
+  --primary-color: #7897B3;
+}
+
+:root.light {
+  --primary-color: #7897B3;
+}

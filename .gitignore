@@ -16,3 +16,6 @@
 
 # Node
 node_modules
+
+# zola
+public/
