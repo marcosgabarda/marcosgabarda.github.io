@@ -1,0 +1,37 @@
+# The URL the site will be built for
+base_url = "https://marcosgabarda.com"
+
+# The site title and description; used in feeds by default.
+title = "marcosgabarda.com"
+description = "hey! I'm Marcos, and this is my site!"
+
+# Whether to automatically compile all Sass files in the sass directory
+compile_sass = true
+
+# Whether to build a search index to be used later on by a JavaScript library
+build_search_index = true
+
+# theme
+theme = "apollo"
+taxonomies = [{ name = "tags" }]
+
+[markdown]
+highlight_code = true
+
+[extra]
+
+# dark or light version
+theme = "toggle"
+
+# social links
+socials = [
+    { name = "email", url = "mailto:hey@marcosgabarda.com", icon = "email" },
+    { name = "github", url = "https://github.com/marcosgabarda/", icon = "github" },
+    { name = "bluesky", url = "https://bsky.app/profile/mgabarda.bsky.social", icon = "bluesky" },
+    { name = "unsplash", url = "https://unsplash.com/es/@cyberslas", icon = "unsplash" },
+]
+
+# menu bar
+menu = [
+  # Configure menu bar here
+]
