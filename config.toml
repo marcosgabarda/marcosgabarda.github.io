@@ -23,19 +23,15 @@ highlight_code = true
 # dark or light version
 theme = "toggle"
 
-stylesheets = [
-    "custom.css"
-]
+stylesheets = ["custom.css"]
 
 # social links
 socials = [
-    { name = "email", url = "mailto:hey@marcosgabarda.com", icon = "email" },
-    { name = "github", url = "https://github.com/marcosgabarda/", icon = "github" },
-    { name = "mastodon", url = "https://mastodon.social/@mgabarda", icon = "mastodon" },
-    { name = "unsplash", url = "https://unsplash.com/es/@cyberslas", icon = "unsplash" },
+  { name = "email", url = "mailto:hey@marcosgabarda.com", icon = "email" },
+  { name = "github", url = "https://github.com/marcosgabarda/", icon = "github" },
+  { name = "mastodon", url = "https://mastodon.social/@mgabarda", icon = "mastodon" },
+  { name = "unsplash", url = "https://unsplash.com/es/@cyberslas", icon = "unsplash" },
 ]
 
 # menu bar
-menu = [
-  # Configure menu bar here
-]
+menu = []
