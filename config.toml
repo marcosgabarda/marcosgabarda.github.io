@@ -35,4 +35,6 @@ socials = [
 ]
 
 # menu bar
-menu = []
+menu = [
+  { name = "/posts", url = "/posts", weight = 1 },
+]

@@ -1,6 +1,7 @@
 +++
 title = "Installing clipboard tool for Wayland"
 date = "2025-06-08"
+draft = true
 +++
 
 # Installing clipboard tool for Wayland
