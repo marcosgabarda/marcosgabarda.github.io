@@ -23,7 +23,7 @@ highlight_code = true
 # dark or light version
 theme = "toggle"
 
-stylesheets = ["custom.css"]
+stylesheets = ["fonts.css", "custom.css"]
 
 # social links
 socials = [
@@ -38,5 +38,4 @@ socials = [
 menu = [
   { name = "/posts", url = "/posts", weight = 1 },
   { name = "/notes", url = "/notes", weight = 2 },
-  { name = "/tags", url = "/tags", weight = 3 },
 ]

@@ -1,10 +1,12 @@
 /* Customization of the theme */
 :root {
   /* Fonts */
-  --text-font: 'Hack Mono';
+  --text-font: 'Hack', monospace;
+  --header-font: 'Hack', monospace;
+  --code-font: 'Hack', monospace;
 }
 
-:root.dark { 
+:root.dark {
   --primary-color: #7897B3;
 }
 
