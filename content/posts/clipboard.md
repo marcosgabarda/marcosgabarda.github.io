@@ -1,7 +1,9 @@
 +++
 title = "Installing clipboard tool for Wayland"
 date = "2025-06-08"
-draft = true
+
+[taxonomies]
+tags = ["debian", "nvim"]
 +++
 
 # Installing clipboard tool for Wayland
@@ -14,5 +16,18 @@ following package:
 
 ```
 sudo apt install wl-clipboard
+```
+
+And then, using the `+` register in normal mode the keymap `"+y` will copy text to the 
+clipboard. And `"+p` will paste text from the clipboard.
+
+An example of `vim` configuration to make it easier:
+
+```
+" Copy/paste using system clipboard
+nnoremap gy "+y
+xnoremap gy "+y
+nnoremap gp "+p
+xnoremap gp "+p
 ```
 

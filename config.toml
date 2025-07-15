@@ -29,7 +29,7 @@ stylesheets = ["custom.css"]
 socials = [
   { name = "email", url = "mailto:hey@marcosgabarda.com", icon = "email" },
   { name = "github", url = "https://github.com/marcosgabarda/", icon = "github" },
-  { name = "bluesky", url = "https://bsky.app/profile/mgabarda.bsky.social", icon = "bluesky" },
+  { name = "bluesky", url = "https://bsky.app/profile/mgabarda.com", icon = "bluesky" },
   { name = "mastodon", url = "https://mastodon.social/@mgabarda", icon = "mastodon" },
   { name = "unsplash", url = "https://unsplash.com/es/@mgabarda", icon = "unsplash" },
 ]
@@ -37,4 +37,6 @@ socials = [
 # menu bar
 menu = [
   { name = "/posts", url = "/posts", weight = 1 },
+  { name = "/notes", url = "/notes", weight = 2 },
+  { name = "/tags", url = "/tags", weight = 3 },
 ]
