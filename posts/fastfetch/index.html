@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en" class="dark light">
+
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="base" content="https:&#x2F;&#x2F;marcosgabarda.com">
+
+    
+
+    
+    
+    
+        <title>
+            
+                fastfetch
+            
+        </title>
+
+        
+            <meta property="og:title"
+                  content="fastfetch" />
+        
+    
+
+    
+        
+            <meta property="og:description" content="hey! I&#x27;m Marcos, and this is my site!" />
+        
+    
+
+    
+        
+            <meta name="description" content="hey! I&#x27;m Marcos, and this is my site!" />
+        
+    
+
+    
+    
+
+    
+    
+        <link href=https://marcosgabarda.com/fonts.css rel="stylesheet" />
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+
+    
+    <link rel="alternate"
+          type="application/atom+xml"
+          title="marcosgabarda.com"
+          href="https://marcosgabarda.com/atom.xml">
+
+
+    
+    
+        <link rel="stylesheet"
+              type="text/css"
+              href="https://marcosgabarda.com/theme/light.css" />
+        <link id="darkModeStyle"
+              rel="stylesheet"
+              type="text/css"
+              href="https://marcosgabarda.com/theme/dark.css" />
+    
+
+    <!-- Set the correct theme in the script -->
+
+    
+        <script src=https://marcosgabarda.com/js/themetoggle.js></script>
+
+        
+            <script>setTheme(getSavedTheme());</script>
+        
+    
+
+
+    <link rel="stylesheet"
+          type="text/css"
+          media="screen"
+          href="https://marcosgabarda.com/main.css" />
+
+    
+        
+            <link rel="stylesheet" href="https://marcosgabarda.com/fonts.css">
+        
+            <link rel="stylesheet" href="https://marcosgabarda.com/custom.css">
+        
+    
+
+    <script defer
+                    src="https://marcosgabarda.com/search_index.en.js?h=40602bee8c7f1d90c260"></script>
+        <script defer
+                src="https://marcosgabarda.com/js/searchElasticlunr.min.js?h=3626c0ef99daa745b31e"></script></head>
+
+
+    <body>
+        <div class="content">
+            <header>
+    <div class="main">
+        
+            <a href=https:&#x2F;&#x2F;marcosgabarda.com>marcosgabarda.com</a>
+        
+
+
+        <div class="socials">
+            
+                <a rel="me" href="mailto:hey@marcosgabarda.com" class="social">
+                    <img alt="email"
+                         src="https://marcosgabarda.com/icons/social/email.svg">
+                </a>
+            
+                <a rel="me" href="https:&#x2F;&#x2F;github.com&#x2F;marcosgabarda&#x2F;" class="social">
+                    <img alt="github"
+                         src="https://marcosgabarda.com/icons/social/github.svg">
+                </a>
+            
+                <a rel="me" href="https:&#x2F;&#x2F;bsky.app&#x2F;profile&#x2F;mgabarda.com" class="social">
+                    <img alt="bluesky"
+                         src="https://marcosgabarda.com/icons/social/bluesky.svg">
+                </a>
+            
+                <a rel="me" href="https:&#x2F;&#x2F;mastodon.social&#x2F;@mgabarda" class="social">
+                    <img alt="mastodon"
+                         src="https://marcosgabarda.com/icons/social/mastodon.svg">
+                </a>
+            
+                <a rel="me" href="https:&#x2F;&#x2F;unsplash.com&#x2F;es&#x2F;@mgabarda" class="social">
+                    <img alt="unsplash"
+                         src="https://marcosgabarda.com/icons/social/unsplash.svg">
+                </a>
+            
+        </div>
+    </div>
+
+    <nav>
+        
+            <a href=https://marcosgabarda.com/posts style="margin-left: 0.25em">&#x2F;posts</a>
+        
+            <a href=https://marcosgabarda.com/notes style="margin-left: 0.25em">&#x2F;notes</a>
+        
+
+        
+            <button id="search-button"
+                    class="search-button"
+                    title="$SHORTCUT to open search">
+                <img src="https://marcosgabarda.com/icons/search.svg"
+                     alt="Search"
+                     class="search-icon">
+            </button>
+
+            <div id="searchModal"
+                 class="search-modal js"
+                 role="dialog"
+                 aria-labelledby="modalTitle">
+                <div id="modal-content">
+                    <h1 id="modalTitle" class="page-header">Search</h1>
+                    <div id="searchBar">
+                        <input id="searchInput"
+                               role="combobox"
+                               autocomplete="off"
+                               spellcheck="false"
+                               aria-expanded="false"
+                               aria-controls="results-container"
+                               placeholder="Search..." />
+                        <button id="clear-search" class="clear-button" title="Clear search">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+                                <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div id="results-container">
+                        <div id="results-info">
+                            <span id="zero_results" style="display: none;">No results</span>
+                            <span id="one_result" style="display: none;">1 result</span>
+                            <span id="many_results" style="display: none;">$NUMBER results</span>
+                        </div>
+                        <div id="results" role="listbox"></div>
+                    </div>
+                </div>
+            </div>
+        
+
+        
+            <a id="dark-mode-toggle"
+               onclick="toggleTheme(); event.preventDefault();"
+               href="#">
+                <img src="https://marcosgabarda.com/icons/sun.svg"
+                     id="sun-icon"
+                     style="filter: invert(1)"
+                     alt="Light" />
+                <img src=https://marcosgabarda.com/icons/moon.svg id="moon-icon" alt="Dark" />
+            </a>
+
+            <!-- Inititialize the theme toggle icons -->
+            <script>updateItemToggleTheme()</script>
+        
+    </nav>
+</header>
+
+
+            
+            
+    
+    <main>
+        <article>
+            <div class="title">
+                
+                
+    <div class="page-header">
+        fastfetch<span class="primary-color" style="font-size: 1.6em">.</span>
+    </div>
+
+
+                <div class="meta">
+                    
+                        Posted on <time>2025-06-08</time>
+                    
+
+                    
+
+                    
+
+                    :: 40 Words
+
+                    
+                    
+                        <span class="tags-label">:: Tags:</span>
+                        <span class="tags">
+                                <a href="https://marcosgabarda.com/tags/debian/"
+                                   class="post-tag">debian</a>
+                                
+                            
+                        </span>
+                    
+
+                    
+                    
+
+                    
+
+                </div>
+            </div>
+
+            
+
+            
+            
+
+            <section class="body">
+                <h1 id="fastfetch"><a class="zola-anchor" href="#fastfetch" aria-label="Anchor link for: fastfetch">fastfetch</a></h1>
+<p>I use <a href="https://github.com/fastfetch-cli/fastfetch">fastfetch</a> as alternative to
+neofetch to gather system information.</p>
+<ol>
+<li>
+<p>Download the latest <code>.deb</code> package released from <a href="https://github.com/fastfetch-cli/fastfetch/releases">here</a>.</p>
+</li>
+<li>
+<p>Install the package:</p>
+</li>
+</ol>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">sudo</span><span> apt install ./fastfetch-linux-amd64.deb
+</span></code></pre>
+<p>My current system information:</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>~ 
+</span><span>❯ fastfetch 
+</span><span>        _,met$$$$$gg.          marcos@guybrush
+</span><span>     ,g$$$$$$$$$$$$$$$P.       ---------------
+</span><span>   ,g$$P&quot;&quot;       &quot;&quot;&quot;Y$$.&quot;.     OS: Debian GNU/Linux 12 (bookworm) x86_64
+</span><span>  ,$$P&#39;              `$$$.     Host: MS-7916 (1.0)
+</span><span>&#39;,$$P       ,ggs.     `$$b:    Kernel: Linux 6.12.32+bpo-amd64
+</span><span>`d$$&#39;     ,$P&quot;&#39;   .    $$$     Uptime: 1 hour, 14 mins
+</span><span> $$P      d$&#39;     ,    $$P     Packages: 3538 (dpkg), 16 (flatpak)
+</span><span> $$:      $$.   -    ,d$$&#39;     Shell: zsh 5.9
+</span><span> $$;      Y$b._   _,d$P&#39;       Display (AORUS FO27Q2): 2560x1440 @ 120 Hz in 27&quot; [External]
+</span><span> Y$$.    `.`&quot;Y$$$$P&quot;&#39;          DE: KDE Plasma 5.27.5
+</span><span> `$$b      &quot;-.__               WM: KWin (Wayland)
+</span><span>  `Y$$b                        WM Theme: Brisa
+</span><span>   `Y$$.                       Theme: Breeze (Dark) [Qt], Breeze [GTK2/3]
+</span><span>     `$$b.                     Icons: breeze-dark [Qt], breeze-dark [GTK2/3/4]
+</span><span>       `Y$$b.                  Font: Noto Sans (10pt) [Qt], Noto Sans (10pt) [GTK2/3/4]
+</span><span>         `&quot;Y$b._               Cursor: breeze (24px)
+</span><span>             `&quot;&quot;&quot;&quot;             Terminal: kitty 0.42.1
+</span><span>                               Terminal Font: HackNF-Regular (11pt)
+</span><span>                               CPU: Intel(R) Core(TM) i7-4790K (8) @ 4.00 GHz
+</span><span>                               GPU: AMD Radeon RX 590 Series [Discrete]
+</span><span>                               Memory: 5.82 GiB / 15.57 GiB (37%)
+</span><span>                               Swap: 0 B / 17.12 GiB (0%)
+</span><span>                               Disk (/): 43.90 GiB / 898.96 GiB (5%) - ext4
+</span><span>                               Disk (/mnt/storage): 14.07 TiB / 18.19 TiB (77%) - fuseblk
+</span><span>                               Local IP (enp4s0): 192.168.1.214/24
+</span><span>                               Locale: es_ES.UTF-8
+</span></code></pre>
+
+            </section>
+        </article>
+    </main>
+
+
+
+            
+                
+            
+
+            
+        </div>
+    </body>
+
+</html>
