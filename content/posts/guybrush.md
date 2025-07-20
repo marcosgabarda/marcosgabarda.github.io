@@ -6,8 +6,8 @@ date = "2025-06-25"
 tags = ["personal", "debian"]
 +++
 
-This is a guide for mayself with all the steps that I have to follow in order to 
-install and condigure Debian 12 in my old but reliable PC.
+This is a guide for myself with all the steps that I have to follow in order to 
+install and configure Debian 12 in my old but reliable PC.
 
 ## Pre-requisites
 
@@ -64,7 +64,7 @@ sudo apt upgrade
 
 ### Install kernel and mesa from backports
 
-With the backports activated, then I have to install the linux kernel and the mesa 
+With the backports activated, then I have to install the Linux kernel and the mesa 
 drivers:
 
 ```bash
@@ -86,7 +86,7 @@ sudo systemctl status ntp
 ## RAID
 
 In my PC I have a set of hard disk configured as a RAID 5, using the capabilities of 
-my motherbase.
+my motherboard.
 
 To mount it, first I have to create mount point:
 
@@ -186,6 +186,6 @@ sudo apt install -t bookworm-backports pipx
 sudo apt install openssh-server mosh
 ```
 
-Mosh is used to improve the connetivity from mobile clients (like Blink). Remember to 
+Mosh is used to improve the connectivity from mobile clients (like Blink). Remember to 
 open the ports `60000:61000/udp` for `mosh` compatibility.
 

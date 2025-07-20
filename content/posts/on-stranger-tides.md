@@ -7,8 +7,8 @@ tags = ["memory", "spanish"]
 +++
 
 This is a post I wrote some years ago in my old blog, (when I was young and full of 
-energye and hopes) and now thanks to [Wayback Machine](https://web.archive.org/) I was 
-able to revocering it!
+energy and hopes) and now thanks to [Wayback Machine](https://web.archive.org/) I was 
+able to recovering it!
 
 This is the original post, without any update, with all my mistakes included:
 
