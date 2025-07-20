@@ -1,5 +1,5 @@
 +++
-title = "Installing clipboard tool for Wayland"
+title = "Clipboard tool for Wayland"
 date = "2025-06-08"
 
 [taxonomies]

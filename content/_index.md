@@ -1,9 +1,9 @@
 +++
-title= "Hey! I'm Marcos"
-template = "homepage.html"
+title= "Hey! I'm Marcos 👋🏼"
+template = "home.html"
 +++
 
-## Software Engineer @ Valencia, Spain.
+## Software Engineer
 
 I'm doing stuff with Python 🐍 (he/him)
 
