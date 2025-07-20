@@ -6,8 +6,6 @@ date = "2025-06-08"
 tags = ["debian"]
 +++
 
-# btop
-
 The version of `btop` command included in Debian 12 it's quite old. But, it is also
 quite easy to install it using the sources:
 

@@ -6,8 +6,6 @@ date = "2025-06-08"
 tags = ["debian", "nvim"]
 +++
 
-# Installing clipboard tool for Wayland
-
 In my eternal journey to learn **nvim** and to use more the terminal, I would need to 
 share the clipboard between the system and nvim itself.
 

@@ -6,8 +6,6 @@ date = "2025-06-08"
 tags = ["debian"]
 +++
 
-# fastfetch
-
 I use [fastfetch](https://github.com/fastfetch-cli/fastfetch) as alternative to 
 neofetch to gather system information.
 
@@ -26,7 +24,8 @@ My current system information:
 ❯ fastfetch 
         _,met$$$$$gg.          marcos@guybrush
      ,g$$$$$$$$$$$$$$$P.       ---------------
-   ,g$$P""       """Y$$.".     OS: Debian GNU/Linux 12 (bookworm) x86_64
+   ,g$$P""       """Y$$.".     OS: Debian GNU/Linux 12 (bookworm) x86_64:W
+
   ,$$P'              `$$$.     Host: MS-7916 (1.0)
 ',$$P       ,ggs.     `$$b:    Kernel: Linux 6.12.32+bpo-amd64
 `d$$'     ,$P"'   .    $$$     Uptime: 1 hour, 14 mins

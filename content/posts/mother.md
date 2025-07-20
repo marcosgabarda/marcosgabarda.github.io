@@ -3,7 +3,7 @@ title = "A letter from my mother"
 date = "2008-12-23"
 
 [taxonomies]
-tags = ["personal", "recovering"]
+tags = ["personal", "memory", "spanish"]
 +++
 
 Today, thanks to [Wayback Machine](https://web.archive.org/) I've found a post I wrote 
@@ -20,5 +20,8 @@ with the letter my mother give to me when I finished my degree:
 >
 > Sólo pido que seas feliz, que contajies la alegría de un corazón grande y noble y 
 > que seas ayuda y guía de los que contigo vamos caminando
+>
+> *¡Muchas gracias mamá! ¡Te quiero muchísimo!*
 
-¡Muchas gracias mamá! ¡Te quiero muchísimo!
+I'll never forget her words, never.
+
