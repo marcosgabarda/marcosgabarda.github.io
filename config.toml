@@ -3,7 +3,7 @@ base_url = "https://marcosgabarda.com"
 
 # The site title and description; used in feeds by default.
 title = "marcosgabarda.com"
-description = "hey! I'm Marcos, and this is my site!"
+description = "hey! I'm Marcos, and this is my digital garden."
 
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = true

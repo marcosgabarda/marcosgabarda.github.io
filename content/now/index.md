@@ -9,7 +9,7 @@ date = "2025-07-20"
 
  - Living in Valencia, Spain 🥘
 
- - Working as **software engineer** and **team lead** at [Deutsche Telekom AG](https://www.telekom.com/en) helping with the **radio planing**.
+ - Working as **software engineer** and **team lead** at [Deutsche Telekom AG](https://www.telekom.com/en) helping with the **radio planning**.
  
  ## My life nowadays
 

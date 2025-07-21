@@ -55,5 +55,4 @@ This is the original post, without any update, with all my mistakes included:
 > tres cabezas
 
 
-A couple of years latter, my wife brought me this book, and it's one of my small 
-treasures ❤️
+A couple of years latter I got this book and it's one of my small treasures ❤️
