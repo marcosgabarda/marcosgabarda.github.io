@@ -8,8 +8,8 @@ tags = ["idea", "note", "python", "geodata", "duckdb", "geoserver"]
 
 ## 📄 Description
 
-Investigate the potential of building a Python library or package to connect 
-geospatial data pipelines using GeoParquet files, efficient queries via DuckDB, and 
+Investigate the potential of building a Python library or package to connect
+geospatial data pipelines using GeoParquet files, efficient queries via DuckDB, and
 publishing through GeoServer. This stack could simplify modern geospatial workflows.
 
 ## ✅ Development Status
@@ -24,4 +24,3 @@ publishing through GeoServer. This stack could simplify modern geospatial workfl
 
 - Try DuckDB with its spatial extension and test with `geopandas` or `shapely`.
 - Consider packaging: CLI + Python module.
-

@@ -16,6 +16,5 @@ I'm a **software engineer**, doing stuff with Python 🐍
 - 👾 Play **video games**
 - 🥘 Cook **paella valenciana** (the real one)
 
-These are some general things about me, but you can check my [now](@/now/index.md) 
+These are some general things about me, but you can check my [now](@/now/index.md)
 page to know what I am up to.
-

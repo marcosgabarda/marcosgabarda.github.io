@@ -12,7 +12,7 @@ tags = ["idea", "project", "development"]
 The service [pocket](https://getpocket.com/) is going to be closed. Therefore, I think
 I could develop a service that would be an alternative self-hosted.
 
-The service could be at first an API to save and retrieve the links, with tags, and 
+The service could be at first an API to save and retrieve the links, with tags, and
 later add a way to:
 
 - cache the contend, creating a clean version of the article
@@ -30,4 +30,3 @@ later add a way to:
 
 - Given a web page, create a minimum version in Markdown of the content, to be cached.
 - Import data from the exported csv from Pocket.
-

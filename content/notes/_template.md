@@ -9,7 +9,7 @@ tags = ["idea", "note", "resources", "project"]
 
 ## 📄 Description
 
-Brieve description of the project. What I want to do?, why am I insterested?, what 
+Brieve description of the project. What I want to do?, why am I insterested?, what
 problem could solve?
 
 ## ✅ Development Status

@@ -8,9 +8,9 @@ tags = ["idea", "note", "blog", "documentation", "snippets"]
 
 ## 📄 Description
 
-Explore the possibility of centralizing small code fragments, technical notes and 
-personal gists in a dedicated blog section. Consider whether this section should be 
-public or private, depending on its usefulness as a personal reference and its 
+Explore the possibility of centralizing small code fragments, technical notes and
+personal gists in a dedicated blog section. Consider whether this section should be
+public or private, depending on its usefulness as a personal reference and its
 potential value to others.
 
 ## ✅ Development Status
@@ -25,4 +25,3 @@ potential value to others.
 
 - Could be integrated as a sub-section of “Technical Notes”.
 - Consider embedding GitHub Gists or adding raw snippets directly in Markdown.
-

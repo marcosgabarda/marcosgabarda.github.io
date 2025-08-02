@@ -6,7 +6,7 @@ date = "2025-06-08"
 tags = ["debian"]
 +++
 
-I use [fastfetch](https://github.com/fastfetch-cli/fastfetch) as alternative to 
+I use [fastfetch](https://github.com/fastfetch-cli/fastfetch) as alternative to
 neofetch to gather system information.
 
 1. Download the latest `.deb` package released from [here](https://github.com/fastfetch-cli/fastfetch/releases).
@@ -20,12 +20,11 @@ sudo apt install ./fastfetch-linux-amd64.deb
 My current system information:
 
 ```
-~ 
-❯ fastfetch 
+~
+❯ fastfetch
         _,met$$$$$gg.          marcos@guybrush
      ,g$$$$$$$$$$$$$$$P.       ---------------
-   ,g$$P""       """Y$$.".     OS: Debian GNU/Linux 12 (bookworm) x86_64:W
-
+   ,g$$P""       """Y$$.".     OS: Debian GNU/Linux 12 (bookworm) x86_64
   ,$$P'              `$$$.     Host: MS-7916 (1.0)
 ',$$P       ,ggs.     `$$b:    Kernel: Linux 6.12.32+bpo-amd64
 `d$$'     ,$P"'   .    $$$     Uptime: 1 hour, 14 mins
@@ -50,4 +49,3 @@ My current system information:
                                Local IP (enp4s0): 192.168.1.214/24
                                Locale: es_ES.UTF-8
 ```
-

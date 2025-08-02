@@ -8,8 +8,8 @@ tags = ["idea", "note", "regex", "resources"]
 
 ## 📄 Description
 
-Take some time to explore [ihateregex.io](https://ihateregex.io), as it offers useful 
-regular expressions and visual explanations that may help simplify complex tasks in 
+Take some time to explore [ihateregex.io](https://ihateregex.io), as it offers useful
+regular expressions and visual explanations that may help simplify complex tasks in
 current or future projects.
 
 ## ✅ Development Status
@@ -23,4 +23,3 @@ current or future projects.
 ## 🏷️ Additional Notes
 
 - Could be useful as part of a future regex cheatsheet.
-

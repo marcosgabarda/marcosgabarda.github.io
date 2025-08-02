@@ -6,17 +6,17 @@ date = "2025-06-08"
 tags = ["debian", "nvim"]
 +++
 
-In my eternal journey to learn **nvim** and to use more the terminal, I would need to 
+In my eternal journey to learn **nvim** and to use more the terminal, I would need to
 share the clipboard between the system and nvim itself.
 
-To be able to do that on my Debian 12, with Wayland and KDE, I need to install the 
+To be able to do that on my Debian 12, with Wayland and KDE, I need to install the
 following package:
 
 ```
 sudo apt install wl-clipboard
 ```
 
-And then, using the `+` register in normal mode the keymap `"+y` will copy text to the 
+And then, using the `+` register in normal mode the keymap `"+y` will copy text to the
 clipboard. And `"+p` will paste text from the clipboard.
 
 An example of `vim` configuration to make it easier:
@@ -28,4 +28,3 @@ xnoremap gy "+y
 nnoremap gp "+p
 xnoremap gp "+p
 ```
-

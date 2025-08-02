@@ -6,12 +6,12 @@ date = "2025-06-25"
 tags = ["personal", "debian"]
 +++
 
-This is a guide for myself with all the steps that I have to follow in order to 
+This is a guide for myself with all the steps that I have to follow in order to
 install and configure Debian 12 in my old but reliable PC.
 
 ## Pre-requisites
 
-First of all, to make sure everything works, update and upgrade packages, and install 
+First of all, to make sure everything works, update and upgrade packages, and install
 `vim` to edit files:
 
 ```bash
@@ -38,7 +38,7 @@ sudo apt install kde-full
 
 ## Enable backports
 
-To be able to have 120Hz in my monitor, I need to 
+To be able to have 120Hz in my monitor, I need to
 
 ```bash
 sudo vim /etc/apt/sources.list.d/debian-backports.sources
@@ -64,7 +64,7 @@ sudo apt upgrade
 
 ### Install kernel and mesa from backports
 
-With the backports activated, then I have to install the Linux kernel and the mesa 
+With the backports activated, then I have to install the Linux kernel and the mesa
 drivers:
 
 ```bash
@@ -85,7 +85,7 @@ sudo systemctl status ntp
 
 ## RAID
 
-In my PC I have a set of hard disk configured as a RAID 5, using the capabilities of 
+In my PC I have a set of hard disk configured as a RAID 5, using the capabilities of
 my motherboard.
 
 To mount it, first I have to create mount point:
@@ -186,6 +186,5 @@ sudo apt install -t bookworm-backports pipx
 sudo apt install openssh-server mosh
 ```
 
-Mosh is used to improve the connectivity from mobile clients (like Blink). Remember to 
+Mosh is used to improve the connectivity from mobile clients (like Blink). Remember to
 open the ports `60000:61000/udp` for `mosh` compatibility.
-

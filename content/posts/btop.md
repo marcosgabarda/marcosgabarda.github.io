@@ -16,4 +16,3 @@ quite easy to install it using the sources:
 ```bash
 sudo make install
 ```
-
