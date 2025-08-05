@@ -2,9 +2,9 @@
 
 {% block main_content %}
     {{ post_macros::home_page(section=section) }}
-    <h3>Latest posts</h3>
+    <h3>Latest notes</h3>
     <main class="post-list">
-        {% set section = get_section(path="posts/_index.md") %}
+        {% set section = get_section(path="notes/_index.md") %}
         {{ post_macros::list_posts(pages=section.pages | slice(end=3)) }}
     </main>
 

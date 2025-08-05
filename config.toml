@@ -37,6 +37,6 @@ socials = [
 # menu bar
 menu = [
   { name = "now", url = "/now", weight = 1 },
-  { name = "posts", url = "/posts", weight = 2 },
-  { name = "notes", url = "/notes", weight = 3 },
+  { name = "notes", url = "/notes", weight = 2 },
+  { name = "seeds", url = "/seeds", weight = 3 },
 ]
