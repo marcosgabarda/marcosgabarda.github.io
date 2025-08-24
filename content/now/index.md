@@ -16,6 +16,6 @@ date = "2025-07-20"
 I married Sandra, my love from high school and we are living in our home 🏡, together
 with Abby 🐇, the best little and free-roam bunny in the world.
 
-I see Pebe 🐈  and Gunter 🐈‍⬛ time to time, but I always keep them in my heart.
+I see Pebe 🐈and Gunter 🐈‍⬛ time to time, but I always keep them in my heart.
 
 ![Abby & me](abby-and-marcos.jpg)
