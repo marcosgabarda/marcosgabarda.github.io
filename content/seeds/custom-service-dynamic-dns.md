@@ -13,7 +13,6 @@ option to configure a custom service for dynamic DNS, therefore, this service co
 live in the server, and use the API from DigitalOcean to update the DNS record when
 the IP changes.
 
-
 ## ✅ Development Status
 
 - [x] Idea drafted
