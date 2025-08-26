@@ -1,5 +1,5 @@
 +++
-title = "Clipboard tool for Wayland"
+title = "Clipboard tool for Wayland and Neovim"
 date = "2025-06-08"
 
 [taxonomies]
@@ -19,12 +19,18 @@ sudo apt install wl-clipboard
 And then, using the `+` register in normal mode the keymap `"+y` will copy text to the
 clipboard. And `"+p` will paste text from the clipboard.
 
-An example of `vim` configuration to make it easier:
+An example of `nvim` configuration in Lua to make it easier, using the leader key:
 
 ```
-" Copy/paste using system clipboard
-nnoremap gy "+y
-xnoremap gy "+y
-nnoremap gp "+p
-xnoremap gp "+p
+-- Yank into system clipboard
+vim.keymap.set({'n', 'v'}, '<leader>y', '"+y') -- yank motion
+vim.keymap.set({'n', 'v'}, '<leader>Y', '"+Y') -- yank line
+
+-- Delete into system clipboard
+vim.keymap.set({'n', 'v'}, '<leader>d', '"+d') -- delete motion
+vim.keymap.set({'n', 'v'}, '<leader>D', '"+D') -- delete line
+
+-- Paste from system clipboard
+vim.keymap.set('n', '<leader>p', '"+p')  -- paste after cursor
+vim.keymap.set('n', '<leader>P', '"+P')  -- paste before cursor
 ```
