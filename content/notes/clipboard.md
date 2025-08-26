@@ -21,7 +21,7 @@ clipboard. And `"+p` will paste text from the clipboard.
 
 An example of `nvim` configuration in Lua to make it easier, using the leader key:
 
-```
+```lua
 -- Yank into system clipboard
 vim.keymap.set({'n', 'v'}, '<leader>y', '"+y') -- yank motion
 vim.keymap.set({'n', 'v'}, '<leader>Y', '"+Y') -- yank line
