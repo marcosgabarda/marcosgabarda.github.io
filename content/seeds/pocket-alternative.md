@@ -28,4 +28,4 @@ later add a way to:
 ## 🏷️ Additional Notes
 
 - Given a web page, create a minimum version in Markdown of the content, to be cached.
-- Import data from the exported csv from Pocket.
+- Import data from the exported CSV from Pocket.

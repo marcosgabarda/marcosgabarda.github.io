@@ -9,7 +9,7 @@ tags = ["idea", "note", "resources", "project"]
 
 ## 📄 Description
 
-Brieve description of the project. What I want to do?, why am I insterested?, what
+Brief description of the project. What I want to do?, why am I interested?, what
 problem could solve?
 
 ## ✅ Development Status
@@ -22,5 +22,5 @@ problem could solve?
 
 ## 🏷️ Additional Notes
 
-- Useful notes, references, thoghts.
-- Dependencie, priorities.
+- Useful notes, references, thoughts.
+- Dependencies priorities.

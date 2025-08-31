@@ -8,7 +8,7 @@ tags = ["idea", "note", "dns", "project"]
 
 ## 📄 Description
 
-Create a local serivce in the computer that works as a DNS updater. The router has an
+Create a local service in the computer that works as a DNS updater. The router has an
 option to configure a custom service for dynamic DNS, therefore, this service could
 live in the server, and use the API from DigitalOcean to update the DNS record when
 the IP changes.
