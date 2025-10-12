@@ -9,7 +9,7 @@ I'm a **software engineer**, doing stuff with Python 🐍
 
 ### Some things I love to do
 
-- ⚔️ Historical fencing with **long sword**
+- ⚔️ Practice historical fencing with **long sword**
 - 📷 Photography with my old and reliable **Nikon D5300**
 - 🎲 **D&D** dungeon master and solo role games
 - 🎨 Paint and collect **Aeldari** armies from Warhammer 40.000

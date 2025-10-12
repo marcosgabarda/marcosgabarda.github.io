@@ -1,5 +1,5 @@
 +++
-title = "Debian 12 instalation guide for my PC"
+title = "Debian 12 installation guide for my PC"
 date = "2025-06-25"
 
 [taxonomies]
