@@ -24,7 +24,14 @@ Basic packages:
 ```bash
 sudo apt install vim
 sudo apt install lua5.4 luarocks
-sudo apt install make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev curl wget git libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev
+```
+
+### Python build environment
+
+Dependencies to build Python interpreter locally:
+
+```bash
+sudo apt install make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev curl wget git libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev libzstd-dev
 ```
 
 ## KDE Plasma and Wayland
