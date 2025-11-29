@@ -21,11 +21,15 @@ This [service](https://www.ipify.org/) allows to get the remote IP, using:
 
  Or clicking [here](https://api.ipify.org/).
 
+ ### Update - 2025-11-29
+
+ First release of the `dyns` application in GitHub: [repositoru](https://github.com/marcosgabarda/dyns-cli).
+
 ## ✅ Development Status
 
 - [x] Idea drafted
 - [x] Initial research
-- [ ] First prototype
+- [x] First prototype
 - [ ] Published on the blog
 - [ ] Archived / abandoned
 
