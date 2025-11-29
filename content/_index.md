@@ -11,8 +11,8 @@ I'm a **software engineer**, doing stuff with Python 🐍
 
 - ⚔️ Practice historical fencing with **long sword**
 - 📷 Photography with my old and reliable **Nikon D5300**
-- 🎲 **D&D** dungeon master and solo role games
-- 🎨 Paint and collect **Aeldari** armies from Warhammer 40.000
+- 🎲 **D&D**/**Vampire: The Masquerade** and solo role games
+- 🎨 Paint and collect **Aeldari** armies from **Warhammer 40.000**
 - 👾 Play **video games**
 - 🥘 Cook **paella valenciana** (the real one)
 
