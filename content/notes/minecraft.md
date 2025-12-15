@@ -3,7 +3,7 @@ title = "Fixing Minecraft launcher on Debian 13"
 date = "2025-10-12"
 
 [taxonomies]
-tags = ["debian"]
+tags = ["computers", "debian"]
 +++
 
 I've [updated](https://bsky.app/profile/mgabarda.com/post/3lwrqyjfbps26) recently to

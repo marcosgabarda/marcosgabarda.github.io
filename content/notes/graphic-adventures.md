@@ -3,7 +3,7 @@ title = "Graphic adventures from yesterday and today"
 date = "2011-06-24"
 
 [taxonomies]
-tags = ["memory", "spanish"]
+tags = ["memories", "spanish"]
 +++
 
 This is a post I wrote some years ago in my old blog, (when I was young and full of

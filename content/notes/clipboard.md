@@ -3,7 +3,7 @@ title = "Clipboard tool for Wayland and Neovim"
 date = "2025-06-08"
 
 [taxonomies]
-tags = ["debian", "nvim"]
+tags = ["computers", "debian", "nvim"]
 +++
 
 In my eternal journey to learn **nvim** and to use more the terminal, I would need to

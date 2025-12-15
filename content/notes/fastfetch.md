@@ -3,7 +3,7 @@ title = "fastfetch"
 date = "2025-06-08"
 
 [taxonomies]
-tags = ["debian"]
+tags = ["computers", "debian"]
 +++
 
 I use [fastfetch](https://github.com/fastfetch-cli/fastfetch) as alternative to

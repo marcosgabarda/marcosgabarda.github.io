@@ -1,6 +1,7 @@
 +++
 title = "Custom service for dynamic DNS"
 date = 2025-09-25
+updated = 2025-11-29
 
 [taxonomies]
 tags = ["idea", "note", "dns", "project"]
@@ -23,7 +24,7 @@ This [service](https://www.ipify.org/) allows to get the remote IP, using:
 
  ### Update - 2025-11-29
 
- First release of the `dyns` application in GitHub: [repositoru](https://github.com/marcosgabarda/dyns-cli).
+ First release of the `dyns` application in GitHub: [repository](https://github.com/marcosgabarda/dyns-cli).
 
 ## ✅ Development Status
 
@@ -31,7 +32,6 @@ This [service](https://www.ipify.org/) allows to get the remote IP, using:
 - [x] Initial research
 - [x] First prototype
 - [ ] Published on the blog
-- [ ] Archived / abandoned
 
 ## 🏷️ Additional Notes
 

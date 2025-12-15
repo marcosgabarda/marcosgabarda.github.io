@@ -1,6 +1,7 @@
 +++
 title = "What am I up to these days?"
 date = "2025-07-20"
+updated = "2025-12-15"
 +++
 
 *This is a [now page](https://nownownow.com/about).*

@@ -3,7 +3,7 @@ title = "Debian 12 installation guide for my PC"
 date = "2025-06-25"
 
 [taxonomies]
-tags = ["personal", "debian"]
+tags = ["computers", "debian"]
 +++
 
 This is a guide for myself with all the steps that I have to follow in order to

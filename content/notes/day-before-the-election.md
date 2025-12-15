@@ -3,7 +3,7 @@ title = "The Day Before Elections"
 date = "2011-05-21"
 
 [taxonomies]
-tags = ["memory", "spanish"]
+tags = ["memories", "spanish"]
 +++
 
 This is a post I wrote some years ago in my old blog, (when I was young and full of

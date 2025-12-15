@@ -3,7 +3,7 @@ title = "The importance of following a style guide"
 date = "2013-05-10"
 
 [taxonomies]
-tags = ["memory", "spanish"]
+tags = ["memories", "spanish"]
 +++
 
 Back in 2013, when I was working in my own company **Cuble**, we decided that it could

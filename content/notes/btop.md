@@ -3,7 +3,7 @@ title = "btop on Debian 12"
 date = "2025-06-08"
 
 [taxonomies]
-tags = ["debian"]
+tags = ["computers", "debian"]
 +++
 
 The version of `btop` command included in Debian 12 it's quite old. But, it is also

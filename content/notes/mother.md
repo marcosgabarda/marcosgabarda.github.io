@@ -3,7 +3,7 @@ title = "A letter from my mother"
 date = "2008-12-23"
 
 [taxonomies]
-tags = ["personal", "memory", "spanish"]
+tags = ["memories", "spanish"]
 +++
 
 Today, thanks to [Wayback Machine](https://web.archive.org/) I've found a post I wrote
