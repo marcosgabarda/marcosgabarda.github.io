@@ -1,13 +1,14 @@
 +++
-title = "Debian 12 installation guide for my PC"
+title = "Debian installation guide for my PC (guybrush)"
 date = "2025-06-25"
+updated = "2026-01-03"
 
 [taxonomies]
 tags = ["computers", "debian"]
 +++
 
 This is a guide for myself with all the steps that I have to follow in order to
-install and configure Debian 12 in my old but reliable PC.
+install and configure Debian 13 in my old but reliable PC.
 
 ## Pre-requisites
 
@@ -41,43 +42,6 @@ Then, install my favorite desktop environment, KDE:
 ```bash
 sudo apt install plasma-workspace-wayland
 sudo apt install kde-full
-```
-
-## Enable backports
-
-To be able to have 120Hz in my monitor, I need to
-
-```bash
-sudo vim /etc/apt/sources.list.d/debian-backports.sources
-```
-
-Enable backports repositories, the file should look like:
-
-```
-Types: deb deb-src
-URIs: http://deb.debian.org/debian
-Suites: stable-backports
-Components: main
-Enabled: yes
-Signed-By: /usr/share/keyrings/debian-archive-keyring.gpg
-```
-
-Update the sources:
-
-```bash
-sudo apt update
-sudo apt upgrade
-```
-
-### Install kernel and mesa from backports
-
-With the backports activated, then I have to install the Linux kernel and the mesa
-drivers:
-
-```bash
-sudo apt install -t bookworm-backports linux-image-amd64
-sudo apt install -t bookworm-backports mesa-utils
-sudo apt install firmware-amd-graphics
 ```
 
 ## Install NTP for date and time
@@ -181,10 +145,10 @@ npm i -g pyright
 
 ### `pipx`
 
-Install `pipx` from backports:
+Install `pipx` from repositories:
 
 ```bash
-sudo apt install -t bookworm-backports pipx
+sudo apt install pipx
 ```
 
 ## Enable SSH server
@@ -195,3 +159,67 @@ sudo apt install openssh-server mosh
 
 Mosh is used to improve the connectivity from mobile clients (like Blink). Remember to
 open the ports `60000:61000/udp` for `mosh` compatibility.
+
+### Secure SSH server
+
+Since I want to be able to access to my computer using SSH, the server will be exposed
+to Internet. Therefore, there are some configurations that I need to set to enhance
+security.
+
+For this, edit `/etc/ssh/sshd_config` and set the following options:
+
+```
+Port [redacted]
+
+PermitRootLogin no
+PasswordAuthentication no
+PermitEmptyPasswords no
+
+AllowUsers marcos
+```
+
+Using a no-standard port, and only allowing my personal user. Also, I want to only
+allow access using public key.
+
+---
+
+**This is no longer necessary since Debian 13, but I keep this information
+for historical reasons.**
+
+## Enable backports
+
+
+To be able to have 120Hz in my monitor, I need to:
+
+```bash
+sudo vim /etc/apt/sources.list.d/debian-backports.sources
+```
+
+Enable backports repositories, the file should look like:
+
+```
+Types: deb deb-src
+URIs: http://deb.debian.org/debian
+Suites: stable-backports
+Components: main
+Enabled: yes
+Signed-By: /usr/share/keyrings/debian-archive-keyring.gpg
+```
+
+Update the sources:
+
+```bash
+sudo apt update
+sudo apt upgrade
+```
+
+### Install kernel and mesa from backports
+
+With the backports activated, then I have to install the Linux kernel and the mesa
+drivers:
+
+```bash
+sudo apt install -t bookworm-backports linux-image-amd64
+sudo apt install -t bookworm-backports mesa-utils
+sudo apt install firmware-amd-graphics
+```

@@ -1,5 +1,5 @@
 +++
-title = "btop on Debian 12"
+title = "btop on Debian"
 date = "2025-06-08"
 
 [taxonomies]
