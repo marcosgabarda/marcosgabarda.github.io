@@ -14,7 +14,7 @@ List of commands to listen radio stations in the terminal, using [mpv](https://m
 mpv "https://rtvelivestream.rtve.es/rtvesec/rne/rne_r1_main.m3u8"
 ```
 
-- SER Valencia
+- **SER Valencia**
 
 ```bash
 mpv "https://playerservices.streamtheworld.com/api/livestream-redirect/SER_VALENCIAAAC.aac"
