@@ -1,5 +1,5 @@
 +++
-title= "Hey! I'm Marcos 👋🏼"
+title= "Hey! I'm Marcos 🤘"
 template = "home.html"
 +++
 
@@ -20,3 +20,7 @@ I'm a **software engineer**, doing stuff with Python 🐍
 
 These are some general things about me, but you can check my [now](@/now/index.md)
 page to know what I am up to.
+
+### More online presence
+
+- [OpenPGP Public Key](https://keys.openpgp.org/search?q=0AB25347D0BC94600DE1548B382154DEBCB48AF4) - 0AB25347D0BC94600DE1548B382154DEBCB48AF4
