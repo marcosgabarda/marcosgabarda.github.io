@@ -1,6 +1,7 @@
 +++
 title = "Managing GPG keys"
 date = "2026-01-13"
+updated = "2026-01-14"
 
 [taxonomies]
 tags = ["computers", "gpg"]
@@ -40,9 +41,14 @@ sub   cv25519 2026-01-13 [E] [caduca: 2028-01-13]
 sig
 ```
 
+In this case:
+
+- `0AB25347D0BC94600DE1548B382154DEBCB48AF4` is the fingerprint.
+- `382154DEBCB48AF4` is the key ID.
+
 ## Send public key to a public keyserver
 
-Then, the public key can be sent to a public keyserver. By default,
+The public key can be sent to a public keyserver. By default,
 `hkps://keys.openpgp.org` is used as keyserver:
 
 ```
