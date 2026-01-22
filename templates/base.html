@@ -6,6 +6,11 @@
     {% include "partials/header.html" %}
 
     <body>
+        <div class="left-content">
+            {% block left_content %}
+            {% endblock left_content %}
+        </div>
+
         <div class="content">
             {% include "partials/nav.html" %}
 
@@ -21,20 +26,25 @@
             {% endif %}
 
             {% if show_comment %}
-                <div class="giscus"></div>
+                <div class="giscus">
+                </div>
                 {% include "_giscus_script.html" %}
             {% endif %}
+        {% block footer %}
+        <hr style="margin-top: 2.5em"/>
+        <footer style="font-size: 14px">
+          <p>
+            © <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>
+          </p>
+          <i>Site created with <a href="https://www.getzola.org/">Zola</a> using <a href="https://github.com/not-matthias/apollo">apollo</a> theme</i>
+        </footer>
+        {% endblock footer %}
+        </div>
 
-            {% block footer %}
-            <hr style="margin-top: 2.5em"/>
-            <footer style="font-size: 14px">
-              <p>
-                © <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>
-              </p>
-              <i>Site created with <a href="https://www.getzola.org/">Zola</a> using <a href="https://github.com/not-matthias/apollo">apollo</a> theme</i>
-            </footer>
-            {% endblock footer %}
 
+        <div class="right-content">
+            {% block right_content %}
+            {% endblock right_content %}
         </div>
     </body>
 

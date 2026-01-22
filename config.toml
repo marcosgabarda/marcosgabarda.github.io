@@ -24,6 +24,7 @@ highlight_code = true
 theme = "toggle"
 dynamic_note = true
 stylesheets = ["fonts.css", "custom.css"]
+toc = true
 
 # social links
 socials = [

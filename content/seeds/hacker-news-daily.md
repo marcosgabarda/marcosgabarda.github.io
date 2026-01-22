@@ -2,7 +2,7 @@
 title = "Hacker News Daily Reader Script"
 date = 2025-06-25
 
-[taxonomies]
+[extra]
 tags = ["idea", "note", "python", "automation", "reading"]
 +++
 

@@ -2,7 +2,7 @@
 title = "Create a Pocket self-hosted alternative"
 date = 2025-06-26
 
-[taxonomies]
+[extra]
 tags = ["idea", "project", "development"]
 +++
 

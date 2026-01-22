@@ -2,7 +2,7 @@
 title = "Check out ihateregex.io"
 date = 2025-06-25
 
-[taxonomies]
+[extra]
 tags = ["idea", "note", "regex", "resources"]
 +++
 

@@ -25,4 +25,4 @@ page to know what I am up to.
 
 - [OpenPGP Public Key](https://keys.openpgp.org/search?q=0AB25347D0BC94600DE1548B382154DEBCB48AF4) - `0AB25347D0BC94600DE1548B382154DEBCB48AF4`
 - Old [Linux Register User](https://en.wikipedia.org/wiki/Linux_Counter) **#419324**
-  (back in 2006)
+  (back in 2006).

@@ -2,7 +2,7 @@
 title = "Centralize Gists, Notes and Snippets in the Blog"
 date = 2025-06-25
 
-[taxonomies]
+[extra]
 tags = ["idea", "note", "blog", "documentation", "snippets"]
 +++
 

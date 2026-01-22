@@ -3,7 +3,7 @@ title = "Custom service for dynamic DNS"
 date = 2025-09-25
 updated = 2025-11-29
 
-[taxonomies]
+[extra]
 tags = ["idea", "note", "dns", "project"]
 +++
 

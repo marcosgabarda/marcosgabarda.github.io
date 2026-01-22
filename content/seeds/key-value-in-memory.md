@@ -2,7 +2,7 @@
 title = "Lightweight In-Memory Redis in Python"
 date = 2025-06-25
 
-[taxonomies]
+[extra]
 tags = ["idea", "note", "python", "database"]
 +++
 

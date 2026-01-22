@@ -2,7 +2,7 @@
 title = "GPS Notes"
 date = 2025-11-29
 
-[taxonomies]
+[extra]
 tags = ["idea", "note", "hardware"]
 +++
 

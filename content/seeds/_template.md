@@ -3,7 +3,7 @@ title = "Title of the idea/note"
 date = 2025-06-25
 draft = true
 
-[taxonomies]
+[extra]
 tags = ["idea", "note", "resources", "project"]
 +++
 
