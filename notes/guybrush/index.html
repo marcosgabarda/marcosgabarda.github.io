@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en" class="dark light">
+
+    <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="base" content="https:&#x2F;&#x2F;marcosgabarda.com" />
+
+    
+
+    
+
+    
+    
+    
+        <title>
+            
+                Debian installation guide for my PC (guybrush)
+            
+        </title>
+
+        
+            <meta property="og:title"
+                  content="Debian installation guide for my PC (guybrush)" />
+        
+    
+
+    
+        
+            <meta property="og:description" content="hey! I&#x27;m Marcos, and this is my digital garden." />
+        
+    
+
+    
+        
+            <meta name="description" content="hey! I&#x27;m Marcos, and this is my digital garden." />
+        
+    
+
+    
+    
+
+    
+    
+        <link href=https://marcosgabarda.com/fonts.css rel="stylesheet" />
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+        <script defer src=https://marcosgabarda.com/js/toc.js></script>
+    
+
+    
+    
+        <script defer src=https://marcosgabarda.com/js/note.js></script>
+    
+
+    
+
+    
+    
+
+
+    
+    
+        <link rel="stylesheet"
+              type="text/css"
+              href="https://marcosgabarda.com/theme/light.css" />
+        <link id="darkModeStyle"
+              rel="stylesheet"
+              type="text/css"
+              href="https://marcosgabarda.com/theme/dark.css" />
+    
+
+    <!-- Set the correct theme in the script -->
+
+    
+        <script src=https://marcosgabarda.com/js/themetoggle.js></script>
+
+        
+            <script>
+                setTheme(getSavedTheme());
+            </script>
+        
+    
+
+
+    <link rel="stylesheet"
+          type="text/css"
+          media="screen"
+          href="https://marcosgabarda.com/main.css" />
+
+    
+        
+            <link rel="stylesheet" href="https://marcosgabarda.com/fonts.css" />
+        
+            <link rel="stylesheet" href="https://marcosgabarda.com/custom.css" />
+        
+    
+
+    <script defer
+                    src="https://marcosgabarda.com/search_index.en.js?h=8b02159fdecdc9850524"></script>
+        <script defer
+                src="https://marcosgabarda.com/js/searchElasticlunr.min.js?h=3626c0ef99daa745b31e"></script></head>
+
+
+    <body>
+        <div class="left-content">
+            
+            
+        </div>
+
+        <div class="content">
+            <nav>
+    <div class="left-nav">
+        
+            <a href=https:&#x2F;&#x2F;marcosgabarda.com>marcosgabarda.com</a>
+        
+
+
+        <div class="socials">
+            
+                
+            
+            
+                <a rel='me' href="mailto:hey@marcosgabarda.com" class="social">
+                    <img alt="email"
+                         src="https://marcosgabarda.com/icons/social/email.svg" />
+                </a>
+            
+                <a rel='me' href="https:&#x2F;&#x2F;github.com&#x2F;marcosgabarda&#x2F;" class="social">
+                    <img alt="github"
+                         src="https://marcosgabarda.com/icons/social/github.svg" />
+                </a>
+            
+                <a rel='me' href="https:&#x2F;&#x2F;bsky.app&#x2F;profile&#x2F;mgabarda.com" class="social">
+                    <img alt="bluesky"
+                         src="https://marcosgabarda.com/icons/social/bluesky.svg" />
+                </a>
+            
+                <a rel='me' href="https:&#x2F;&#x2F;mastodon.social&#x2F;@mgabarda" class="social">
+                    <img alt="mastodon"
+                         src="https://marcosgabarda.com/icons/social/mastodon.svg" />
+                </a>
+            
+                <a rel='me' href="https:&#x2F;&#x2F;unsplash.com&#x2F;es&#x2F;@mgabarda" class="social">
+                    <img alt="unsplash"
+                         src="https://marcosgabarda.com/icons/social/unsplash.svg" />
+                </a>
+            
+        </div>
+    </div>
+
+    <div class="right-nav">
+        
+            <a href=https://marcosgabarda.com/now style="margin-right: 0.5em">now</a>
+        
+            <a href=https://marcosgabarda.com/notes style="margin-right: 0.5em">notes</a>
+        
+            <a href=https://marcosgabarda.com/photos style="margin-right: 0.5em">photos</a>
+        
+            <a href=https://marcosgabarda.com/seeds style="margin-right: 0.5em">seeds</a>
+        
+
+        
+            <button id="search-button"
+                    class="search-button"
+                    title="$SHORTCUT to open search">
+                <img src="https://marcosgabarda.com/icons/search.svg"
+                     alt="Search"
+                     class="search-icon" />
+            </button>
+
+            <div id="searchModal"
+                 class="search-modal js"
+                 role="dialog"
+                 aria-labelledby="modalTitle">
+                <div id="modal-content">
+                    <h1 id="modalTitle" class="page-header">
+                        Search
+                    </h1>
+                    <div id="searchBar">
+                        <input id="searchInput"
+                               role="combobox"
+                               autocomplete="off"
+                               spellcheck="false"
+                               aria-expanded="false"
+                               aria-controls="results-container"
+                               placeholder="Search..." />
+                        <button id="clear-search" class="clear-button" title="Clear search">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+                                <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div id="results-container">
+                        <div id="results-info">
+                            <span id="zero_results" style="display: none;">No results</span>
+                            <span id="one_result" style="display: none;">1 result</span>
+                            <span id="many_results" style="display: none;">$NUMBER results</span>
+                        </div>
+                        <div id="results" role="listbox">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+
+        
+            <a id="dark-mode-toggle"
+               onclick="toggleTheme(); event.preventDefault();"
+               href="#">
+                <img src="https://marcosgabarda.com/icons/sun.svg" id="sun-icon" alt="Light" />
+                <img src="https://marcosgabarda.com/icons/moon.svg"
+                     id="moon-icon"
+                     style="filter: invert(1)"
+                     alt="Dark" />
+                <img src="https://marcosgabarda.com/icons/auto.svg"
+                     id="auto-icon"
+                     style="filter: invert(1)"
+                     alt="Auto" />
+            </a>
+
+            <!-- Initialize the theme toggle icons -->
+            <script>
+                updateItemToggleTheme()
+            </script>
+        
+    </div>
+</nav>
+
+
+            
+            
+    
+    <div class="visible-element-observer-root" data-selector="main article p">
+        <main>
+            <article>
+                <div class="title">
+                    
+                    
+    
+        <div class="page-header">
+            Debian installation guide for my PC (guybrush)
+        </div>
+    
+
+
+                    <div class="meta">
+                        
+                            Posted on <time>2025-06-25</time>
+                        
+
+
+                        
+                            :: Updated on <time>2026-01-03</time>
+                        
+
+                        
+
+                        
+
+                        
+                        
+
+                        
+                        
+
+                        
+                        
+                            <span class="tags-label">::</span>
+                            <span class="tags">
+                                    <a href="https://marcosgabarda.com/tags/computers/"
+                                       class="post-tag">computers</a>
+                                
+                                    <a href="https://marcosgabarda.com/tags/debian/"
+                                       class="post-tag">debian</a>
+                                
+                            </span>
+                        
+
+                        
+
+                    </div>
+                </div>
+
+                
+
+                <section class="body">
+                    <p>This is a guide for myself with all the steps that I have to follow in order to
+install and configure Debian 13 in my old but reliable PC.</p>
+<h2 id="pre-requisites"><a class="zola-anchor" href="#pre-requisites" aria-label="Anchor link for: pre-requisites">Pre-requisites</a></h2>
+<p>First of all, to make sure everything works, update and upgrade packages, and install
+<code>vim</code> to edit files:</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">sudo</span><span> apt update
+</span><span style="color:#bf616a;">sudo</span><span> apt upgrade
+</span></code></pre>
+<p>Basic packages:</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">sudo</span><span> apt install vim
+</span><span style="color:#bf616a;">sudo</span><span> apt install lua5.4 luarocks
+</span></code></pre>
+<h3 id="python-build-environment"><a class="zola-anchor" href="#python-build-environment" aria-label="Anchor link for: python-build-environment">Python build environment</a></h3>
+<p>Dependencies to build Python interpreter locally:</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">sudo</span><span> apt install make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev curl wget git libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev libzstd-dev
+</span></code></pre>
+<h2 id="kde-plasma-and-wayland"><a class="zola-anchor" href="#kde-plasma-and-wayland" aria-label="Anchor link for: kde-plasma-and-wayland">KDE Plasma and Wayland</a></h2>
+<p>Then, install my favorite desktop environment, KDE:</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">sudo</span><span> apt install plasma-workspace-wayland
+</span><span style="color:#bf616a;">sudo</span><span> apt install kde-full
+</span></code></pre>
+<h2 id="install-ntp-for-date-and-time"><a class="zola-anchor" href="#install-ntp-for-date-and-time" aria-label="Anchor link for: install-ntp-for-date-and-time">Install NTP for date and time</a></h2>
+<p>By default, the time and date are not updated using Internet. To be able to do that,
+I have to install <code>ntp</code>:</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">sudo</span><span> apt install ntp
+</span><span style="color:#bf616a;">sudo</span><span> systemctl status ntp
+</span></code></pre>
+<h2 id="raid"><a class="zola-anchor" href="#raid" aria-label="Anchor link for: raid">RAID</a></h2>
+<p>In my PC I have a set of hard disk configured as a RAID 5, using the capabilities of
+my motherboard.</p>
+<p>To mount it, first I have to create mount point:</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>sudo mkdir -p /mnt/storage/
+</span><span>sudo chown marcos:marcos /mnt/storage/
+</span></code></pre>
+<p>Check disks:</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">sudo</span><span> apt install fdisk
+</span><span style="color:#bf616a;">sudo</span><span> fdisk</span><span style="color:#bf616a;"> -l
+</span></code></pre>
+<p>The RAID volume is:</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>...
+</span><span>Disco /dev/md126: 18,19 TiB, 20003922378752 bytes, 39070160896 sectores
+</span><span>Unidades: sectores de 1 * 512 = 512 bytes
+</span><span>Tamaño de sector (lógico/físico): 512 bytes / 4096 bytes
+</span><span>Tamaño de E/S (mínimo/óptimo): 65536 bytes / 327680 bytes
+</span><span>Tipo de etiqueta de disco: gpt
+</span><span>Identificador del disco: 5A97A530-5A8B-499C-9B06-4A9F380B63F4
+</span><span>...
+</span></code></pre>
+<p>Install the NTFS driver:</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">sudo</span><span> apt install ntfs-3g
+</span><span style="color:#bf616a;">sudo</span><span> vim /etc/fstab
+</span></code></pre>
+<p>Append to fstab:</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span># Mount RAID
+</span><span>/dev/md126p2 /mnt/storage ntfs-3g defaults,uid=1000,gid=1001,umask=002,windows_names,locale=en_US.UTF-8	0	2
+</span></code></pre>
+<h2 id="flatpack"><a class="zola-anchor" href="#flatpack" aria-label="Anchor link for: flatpack">Flatpack</a></h2>
+<p>Some applications are more useful installed from Flatpack, like Telegram.</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">sudo</span><span> apt install flatpak
+</span><span style="color:#bf616a;">sudo</span><span> apt install plasma-discover-backend-flatpak
+</span><span style="color:#bf616a;">flatpak</span><span> remote-add</span><span style="color:#bf616a;"> --if-not-exists</span><span> flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+</span></code></pre>
+<h2 id="development-environments"><a class="zola-anchor" href="#development-environments" aria-label="Anchor link for: development-environments">Development environments</a></h2>
+<h3 id="node-and-pyright"><a class="zola-anchor" href="#node-and-pyright" aria-label="Anchor link for: node-and-pyright">Node and Pyright</a></h3>
+<p>Used by NeoVIM to be able to use <code>pyright</code> as LSP.</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/i
+</span><span>nstall.sh | bash
+</span></code></pre>
+<p>Add the following to the bash/zsh init script:</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#65737e;"># nvm for node versions
+</span><span style="color:#b48ead;">export </span><span style="color:#bf616a;">NVM_DIR</span><span>=&quot;$</span><span style="color:#bf616a;">HOME</span><span style="color:#a3be8c;">/.nvm</span><span>&quot;
+</span><span style="color:#96b5b4;">[ </span><span style="color:#bf616a;">-s </span><span>&quot;$</span><span style="color:#bf616a;">NVM_DIR</span><span style="color:#a3be8c;">/nvm.sh</span><span>&quot; </span><span style="color:#96b5b4;">] </span><span>&amp;&amp; </span><span style="color:#96b5b4;">\. </span><span>&quot;$</span><span style="color:#bf616a;">NVM_DIR</span><span style="color:#a3be8c;">/nvm.sh</span><span>&quot;  </span><span style="color:#65737e;"># This loads nvm
+</span><span style="color:#96b5b4;">[ </span><span style="color:#bf616a;">-s </span><span>&quot;$</span><span style="color:#bf616a;">NVM_DIR</span><span style="color:#a3be8c;">/bash_completion</span><span>&quot; </span><span style="color:#96b5b4;">] </span><span>&amp;&amp; </span><span style="color:#96b5b4;">\. </span><span>&quot;$</span><span style="color:#bf616a;">NVM_DIR</span><span style="color:#a3be8c;">/bash_completion</span><span>&quot;  </span><span style="color:#65737e;"># This loads nvm bash_completion
+</span></code></pre>
+<p>Install the latest version of Node LTS:</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">nvm</span><span> use</span><span style="color:#bf616a;"> --lts
+</span><span style="color:#bf616a;">nvm</span><span> install 22
+</span></code></pre>
+<p>Install pyright:</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>npm i -g pyright
+</span></code></pre>
+<h3 id="pipx"><a class="zola-anchor" href="#pipx" aria-label="Anchor link for: pipx"><code>pipx</code></a></h3>
+<p>Install <code>pipx</code> from repositories:</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">sudo</span><span> apt install pipx
+</span></code></pre>
+<h2 id="enable-ssh-server"><a class="zola-anchor" href="#enable-ssh-server" aria-label="Anchor link for: enable-ssh-server">Enable SSH server</a></h2>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">sudo</span><span> apt install openssh-server mosh
+</span></code></pre>
+<p>Mosh is used to improve the connectivity from mobile clients (like Blink). Remember to
+open the ports <code>60000:61000/udp</code> for <code>mosh</code> compatibility.</p>
+<h3 id="secure-ssh-server"><a class="zola-anchor" href="#secure-ssh-server" aria-label="Anchor link for: secure-ssh-server">Secure SSH server</a></h3>
+<p>Since I want to be able to access to my computer using SSH, the server will be exposed
+to Internet. Therefore, there are some configurations that I need to set to enhance
+security.</p>
+<p>For this, edit <code>/etc/ssh/sshd_config</code> and set the following options:</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>Port [redacted]
+</span><span>
+</span><span>PermitRootLogin no
+</span><span>PasswordAuthentication no
+</span><span>PermitEmptyPasswords no
+</span><span>
+</span><span>AllowUsers marcos
+</span></code></pre>
+<p>Using a no-standard port, and only allowing my personal user. Also, I want to only
+allow access using public key.</p>
+<hr />
+<p><strong>This is no longer necessary since Debian 13, but I keep this information
+for historical reasons.</strong></p>
+<h2 id="enable-backports"><a class="zola-anchor" href="#enable-backports" aria-label="Anchor link for: enable-backports">Enable backports</a></h2>
+<p>To be able to have 120Hz in my monitor, I need to:</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">sudo</span><span> vim /etc/apt/sources.list.d/debian-backports.sources
+</span></code></pre>
+<p>Enable backports repositories, the file should look like:</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>Types: deb deb-src
+</span><span>URIs: http://deb.debian.org/debian
+</span><span>Suites: stable-backports
+</span><span>Components: main
+</span><span>Enabled: yes
+</span><span>Signed-By: /usr/share/keyrings/debian-archive-keyring.gpg
+</span></code></pre>
+<p>Update the sources:</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">sudo</span><span> apt update
+</span><span style="color:#bf616a;">sudo</span><span> apt upgrade
+</span></code></pre>
+<h3 id="install-kernel-and-mesa-from-backports"><a class="zola-anchor" href="#install-kernel-and-mesa-from-backports" aria-label="Anchor link for: install-kernel-and-mesa-from-backports">Install kernel and mesa from backports</a></h3>
+<p>With the backports activated, then I have to install the Linux kernel and the mesa
+drivers:</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">sudo</span><span> apt install</span><span style="color:#bf616a;"> -t</span><span> bookworm-backports linux-image-amd64
+</span><span style="color:#bf616a;">sudo</span><span> apt install</span><span style="color:#bf616a;"> -t</span><span> bookworm-backports mesa-utils
+</span><span style="color:#bf616a;">sudo</span><span> apt install firmware-amd-graphics
+</span></code></pre>
+
+                </section>
+            </article>
+        </main>
+    </div>
+
+
+
+            
+                
+            
+
+            
+        
+        <hr style="margin-top: 2.5em"/>
+        <footer style="font-size: 14px">
+          <p>
+            © <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>
+          </p>
+          <i>Site created with <a href="https://www.getzola.org/">Zola</a> using <a href="https://github.com/not-matthias/apollo">apollo</a> theme</i>
+        </footer>
+        
+        </div>
+
+
+        <div class="right-content">
+            
+    
+    
+        <div class="toc">
+    <div class="heading">
+        Table of Contents
+    </div>
+    <ul class="toc-list">
+        
+            <li class="parent">
+                
+                <a href="https://marcosgabarda.com/notes/guybrush/#pre-requisites">Pre-requisites</a>
+
+                
+                    <ul>
+                        
+                            
+                            <li>
+                                <a href="https://marcosgabarda.com/notes/guybrush/#python-build-environment">Python build environment</a>
+                            </li>
+
+                            
+                        
+                    </ul>
+                
+            </li>
+        
+            <li class="parent">
+                
+                <a href="https://marcosgabarda.com/notes/guybrush/#kde-plasma-and-wayland">KDE Plasma and Wayland</a>
+
+                
+            </li>
+        
+            <li class="parent">
+                
+                <a href="https://marcosgabarda.com/notes/guybrush/#install-ntp-for-date-and-time">Install NTP for date and time</a>
+
+                
+            </li>
+        
+            <li class="parent">
+                
+                <a href="https://marcosgabarda.com/notes/guybrush/#raid">RAID</a>
+
+                
+            </li>
+        
+            <li class="parent">
+                
+                <a href="https://marcosgabarda.com/notes/guybrush/#flatpack">Flatpack</a>
+
+                
+            </li>
+        
+            <li class="parent">
+                
+                <a href="https://marcosgabarda.com/notes/guybrush/#development-environments">Development environments</a>
+
+                
+                    <ul>
+                        
+                            
+                            <li>
+                                <a href="https://marcosgabarda.com/notes/guybrush/#node-and-pyright">Node and Pyright</a>
+                            </li>
+
+                            
+                        
+                            
+                            <li>
+                                <a href="https://marcosgabarda.com/notes/guybrush/#pipx">pipx</a>
+                            </li>
+
+                            
+                        
+                    </ul>
+                
+            </li>
+        
+            <li class="parent">
+                
+                <a href="https://marcosgabarda.com/notes/guybrush/#enable-ssh-server">Enable SSH server</a>
+
+                
+                    <ul>
+                        
+                            
+                            <li>
+                                <a href="https://marcosgabarda.com/notes/guybrush/#secure-ssh-server">Secure SSH server</a>
+                            </li>
+
+                            
+                        
+                    </ul>
+                
+            </li>
+        
+            <li class="parent">
+                
+                <a href="https://marcosgabarda.com/notes/guybrush/#enable-backports">Enable backports</a>
+
+                
+                    <ul>
+                        
+                            
+                            <li>
+                                <a href="https://marcosgabarda.com/notes/guybrush/#install-kernel-and-mesa-from-backports">Install kernel and mesa from backports</a>
+                            </li>
+
+                            
+                        
+                    </ul>
+                
+            </li>
+        
+    </ul>
+</div>
+
+    
+
+        </div>
+    </body>
+
+</html>

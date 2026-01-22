@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en" class="dark light">
+
+    <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="base" content="https:&#x2F;&#x2F;marcosgabarda.com" />
+
+    
+
+    
+
+    
+    
+    
+        <title>
+            
+                On Stranger Tides
+            
+        </title>
+
+        
+            <meta property="og:title"
+                  content="On Stranger Tides" />
+        
+    
+
+    
+        
+            <meta property="og:description" content="hey! I&#x27;m Marcos, and this is my digital garden." />
+        
+    
+
+    
+        
+            <meta name="description" content="hey! I&#x27;m Marcos, and this is my digital garden." />
+        
+    
+
+    
+    
+
+    
+    
+        <link href=https://marcosgabarda.com/fonts.css rel="stylesheet" />
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+        <script defer src=https://marcosgabarda.com/js/toc.js></script>
+    
+
+    
+    
+        <script defer src=https://marcosgabarda.com/js/note.js></script>
+    
+
+    
+
+    
+    
+
+
+    
+    
+        <link rel="stylesheet"
+              type="text/css"
+              href="https://marcosgabarda.com/theme/light.css" />
+        <link id="darkModeStyle"
+              rel="stylesheet"
+              type="text/css"
+              href="https://marcosgabarda.com/theme/dark.css" />
+    
+
+    <!-- Set the correct theme in the script -->
+
+    
+        <script src=https://marcosgabarda.com/js/themetoggle.js></script>
+
+        
+            <script>
+                setTheme(getSavedTheme());
+            </script>
+        
+    
+
+
+    <link rel="stylesheet"
+          type="text/css"
+          media="screen"
+          href="https://marcosgabarda.com/main.css" />
+
+    
+        
+            <link rel="stylesheet" href="https://marcosgabarda.com/fonts.css" />
+        
+            <link rel="stylesheet" href="https://marcosgabarda.com/custom.css" />
+        
+    
+
+    <script defer
+                    src="https://marcosgabarda.com/search_index.en.js?h=8b02159fdecdc9850524"></script>
+        <script defer
+                src="https://marcosgabarda.com/js/searchElasticlunr.min.js?h=3626c0ef99daa745b31e"></script></head>
+
+
+    <body>
+        <div class="left-content">
+            
+            
+        </div>
+
+        <div class="content">
+            <nav>
+    <div class="left-nav">
+        
+            <a href=https:&#x2F;&#x2F;marcosgabarda.com>marcosgabarda.com</a>
+        
+
+
+        <div class="socials">
+            
+                
+            
+            
+                <a rel='me' href="mailto:hey@marcosgabarda.com" class="social">
+                    <img alt="email"
+                         src="https://marcosgabarda.com/icons/social/email.svg" />
+                </a>
+            
+                <a rel='me' href="https:&#x2F;&#x2F;github.com&#x2F;marcosgabarda&#x2F;" class="social">
+                    <img alt="github"
+                         src="https://marcosgabarda.com/icons/social/github.svg" />
+                </a>
+            
+                <a rel='me' href="https:&#x2F;&#x2F;bsky.app&#x2F;profile&#x2F;mgabarda.com" class="social">
+                    <img alt="bluesky"
+                         src="https://marcosgabarda.com/icons/social/bluesky.svg" />
+                </a>
+            
+                <a rel='me' href="https:&#x2F;&#x2F;mastodon.social&#x2F;@mgabarda" class="social">
+                    <img alt="mastodon"
+                         src="https://marcosgabarda.com/icons/social/mastodon.svg" />
+                </a>
+            
+                <a rel='me' href="https:&#x2F;&#x2F;unsplash.com&#x2F;es&#x2F;@mgabarda" class="social">
+                    <img alt="unsplash"
+                         src="https://marcosgabarda.com/icons/social/unsplash.svg" />
+                </a>
+            
+        </div>
+    </div>
+
+    <div class="right-nav">
+        
+            <a href=https://marcosgabarda.com/now style="margin-right: 0.5em">now</a>
+        
+            <a href=https://marcosgabarda.com/notes style="margin-right: 0.5em">notes</a>
+        
+            <a href=https://marcosgabarda.com/photos style="margin-right: 0.5em">photos</a>
+        
+            <a href=https://marcosgabarda.com/seeds style="margin-right: 0.5em">seeds</a>
+        
+
+        
+            <button id="search-button"
+                    class="search-button"
+                    title="$SHORTCUT to open search">
+                <img src="https://marcosgabarda.com/icons/search.svg"
+                     alt="Search"
+                     class="search-icon" />
+            </button>
+
+            <div id="searchModal"
+                 class="search-modal js"
+                 role="dialog"
+                 aria-labelledby="modalTitle">
+                <div id="modal-content">
+                    <h1 id="modalTitle" class="page-header">
+                        Search
+                    </h1>
+                    <div id="searchBar">
+                        <input id="searchInput"
+                               role="combobox"
+                               autocomplete="off"
+                               spellcheck="false"
+                               aria-expanded="false"
+                               aria-controls="results-container"
+                               placeholder="Search..." />
+                        <button id="clear-search" class="clear-button" title="Clear search">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+                                <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div id="results-container">
+                        <div id="results-info">
+                            <span id="zero_results" style="display: none;">No results</span>
+                            <span id="one_result" style="display: none;">1 result</span>
+                            <span id="many_results" style="display: none;">$NUMBER results</span>
+                        </div>
+                        <div id="results" role="listbox">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+
+        
+            <a id="dark-mode-toggle"
+               onclick="toggleTheme(); event.preventDefault();"
+               href="#">
+                <img src="https://marcosgabarda.com/icons/sun.svg" id="sun-icon" alt="Light" />
+                <img src="https://marcosgabarda.com/icons/moon.svg"
+                     id="moon-icon"
+                     style="filter: invert(1)"
+                     alt="Dark" />
+                <img src="https://marcosgabarda.com/icons/auto.svg"
+                     id="auto-icon"
+                     style="filter: invert(1)"
+                     alt="Auto" />
+            </a>
+
+            <!-- Initialize the theme toggle icons -->
+            <script>
+                updateItemToggleTheme()
+            </script>
+        
+    </div>
+</nav>
+
+
+            
+            
+    
+    <div class="visible-element-observer-root" data-selector="main article p">
+        <main>
+            <article>
+                <div class="title">
+                    
+                    
+    
+        <div class="page-header">
+            On Stranger Tides
+        </div>
+    
+
+
+                    <div class="meta">
+                        
+                            Posted on <time>2011-07-08</time>
+                        
+
+
+                        
+
+                        
+
+                        
+
+                        
+                        
+
+                        
+                        
+
+                        
+                        
+                            <span class="tags-label">::</span>
+                            <span class="tags">
+                                    <a href="https://marcosgabarda.com/tags/memories/"
+                                       class="post-tag">memories</a>
+                                
+                                    <a href="https://marcosgabarda.com/tags/spanish/"
+                                       class="post-tag">spanish</a>
+                                
+                            </span>
+                        
+
+                        
+
+                    </div>
+                </div>
+
+                
+
+                <section class="body">
+                    <p>This is a post I wrote some years ago in my old blog, (when I was young and full of
+energy and hopes) and now thanks to <a href="https://web.archive.org/">Wayback Machine</a> I was
+able to recovering it!</p>
+<p>This is the original post, without any update, with all my mistakes included:</p>
+<blockquote>
+<p>Hace una semana que soy un feliz poseedor de un lector de libros electrónicos,
+concretamente de un Amazon Kindle, y ya he terminado de leer mi primer libro en este
+dispositivo: En Costas Extrañas, de Tim Powers. Puede parecer una tontería, pero este
+libro es una de las razones que me ha impulsado a comprarme un Kindle. Os pondré un
+poco en situación.</p>
+<p>Un alegre día hace ya un tiempo descubrí el <a href="https://grumpygamer.com/">blog personal</a>
+de Ron Gilbert, y leyendo sus entradas, descubrí una que me llamó la atención. Él, en
+<a href="https://grumpygamer.com/on_stranger_tides/">esta entrada</a>, hablaba del
+libro On Stranger Tides, y como, junto a la atracción de Piratas del Caribe, había
+servido de inspiración para la creación del que es, sin duda alguna, mi juego favorito,
+The Secret of Monkey Island. ¡Genial!, pensé alegremente, ¡tengo que leermelo! ¡me
+encantaría sumergirme en un mundo que me hiciera sentir como un intrépido Guybrush
+cualquiera!, seguí pensando. Así que lo reservé en La Casa del Libro, ya que no tenían
+ninguno en stock. Pasó el tiempo, se sucedieron las visitas a la tienda, y nada… no
+llegaba… me llegaron a decir que si no había llegado ya, que me olvidara.</p>
+<p>Así que fui a mi plan B, descargarme el libro en formato ePub (sí, descargado, SGAE
+ven a por mi si tienes huevos ¬¬) y leerlo en su versión electrónica. Aunque antes
+usaba mi Nexus One para leer libros, la verdad es que era algo que me destrozaba la
+vista… eso, unido a la ilusión que tenía por este libro, y que quería leerlo en
+condiciones, hizo que se terminara de decantar la balanza a favor de la compra de un
+lector de eBooks, que ya era una idea que me rondaba.</p>
+<p>Bueno, y como no podía ser de otra manera, este ha sido el primer libro que han leído
+mis ojos en tinta electrónica, y que puedo decir… ¡no me ha decepcionado ni lo más
+mínimo! Un joven protagonista obligado a convertirse en pirata y obsesionado con
+vengar la muerte de su padre, un capitán pirata que lo decide proteger, mucha magia
+vudú, loas, fantasmas, zombies (piratas y no piratas), un hombre desesperado por la
+muerte de su esposa y una hija que desprecia, el legendario Barbanegra, la Fuente de
+la juventud, peleas a espadas (pero sin insultos, lastima), batallas marinas, huidas
+de la Armada por las calles de una colonia inglesa, difíciles romances y bueno, muchas
+situaciones más que me han tenido enganchado leyendo toda la semana en cualquier hueco
+que tenía, incluso mientras andaba por la calle.</p>
+<p>Resumiendo, mis altas expectativas han sido satisfechas, he disfrutado mucho con la
+lectura y en un soporte electrónico inmejorable. ¡He disfrutado como un crío! Un crío
+que pasó muchas horas aprendiendo respuestas ingeniosas a insultos, usando un pollo
+con una polea en medio, un recoge-plátanos gigante y… ¡mira detrás de ti! ¡un mono de
+tres cabezas</p>
+</blockquote>
+<p>A couple of years latter I got this book and it's one of my small treasures ❤️</p>
+
+                </section>
+            </article>
+        </main>
+    </div>
+
+
+
+            
+                
+            
+
+            
+        
+        <hr style="margin-top: 2.5em"/>
+        <footer style="font-size: 14px">
+          <p>
+            © <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>
+          </p>
+          <i>Site created with <a href="https://www.getzola.org/">Zola</a> using <a href="https://github.com/not-matthias/apollo">apollo</a> theme</i>
+        </footer>
+        
+        </div>
+
+
+        <div class="right-content">
+            
+    
+    
+
+        </div>
+    </body>
+
+</html>

@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en" class="dark light">
+
+    <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="base" content="https:&#x2F;&#x2F;marcosgabarda.com" />
+
+    
+
+    
+
+    
+    
+    
+        <title>
+            
+                Managing GPG keys
+            
+        </title>
+
+        
+            <meta property="og:title"
+                  content="Managing GPG keys" />
+        
+    
+
+    
+        
+            <meta property="og:description" content="hey! I&#x27;m Marcos, and this is my digital garden." />
+        
+    
+
+    
+        
+            <meta name="description" content="hey! I&#x27;m Marcos, and this is my digital garden." />
+        
+    
+
+    
+    
+
+    
+    
+        <link href=https://marcosgabarda.com/fonts.css rel="stylesheet" />
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+        <script defer src=https://marcosgabarda.com/js/toc.js></script>
+    
+
+    
+    
+        <script defer src=https://marcosgabarda.com/js/note.js></script>
+    
+
+    
+
+    
+    
+
+
+    
+    
+        <link rel="stylesheet"
+              type="text/css"
+              href="https://marcosgabarda.com/theme/light.css" />
+        <link id="darkModeStyle"
+              rel="stylesheet"
+              type="text/css"
+              href="https://marcosgabarda.com/theme/dark.css" />
+    
+
+    <!-- Set the correct theme in the script -->
+
+    
+        <script src=https://marcosgabarda.com/js/themetoggle.js></script>
+
+        
+            <script>
+                setTheme(getSavedTheme());
+            </script>
+        
+    
+
+
+    <link rel="stylesheet"
+          type="text/css"
+          media="screen"
+          href="https://marcosgabarda.com/main.css" />
+
+    
+        
+            <link rel="stylesheet" href="https://marcosgabarda.com/fonts.css" />
+        
+            <link rel="stylesheet" href="https://marcosgabarda.com/custom.css" />
+        
+    
+
+    <script defer
+                    src="https://marcosgabarda.com/search_index.en.js?h=8b02159fdecdc9850524"></script>
+        <script defer
+                src="https://marcosgabarda.com/js/searchElasticlunr.min.js?h=3626c0ef99daa745b31e"></script></head>
+
+
+    <body>
+        <div class="left-content">
+            
+            
+        </div>
+
+        <div class="content">
+            <nav>
+    <div class="left-nav">
+        
+            <a href=https:&#x2F;&#x2F;marcosgabarda.com>marcosgabarda.com</a>
+        
+
+
+        <div class="socials">
+            
+                
+            
+            
+                <a rel='me' href="mailto:hey@marcosgabarda.com" class="social">
+                    <img alt="email"
+                         src="https://marcosgabarda.com/icons/social/email.svg" />
+                </a>
+            
+                <a rel='me' href="https:&#x2F;&#x2F;github.com&#x2F;marcosgabarda&#x2F;" class="social">
+                    <img alt="github"
+                         src="https://marcosgabarda.com/icons/social/github.svg" />
+                </a>
+            
+                <a rel='me' href="https:&#x2F;&#x2F;bsky.app&#x2F;profile&#x2F;mgabarda.com" class="social">
+                    <img alt="bluesky"
+                         src="https://marcosgabarda.com/icons/social/bluesky.svg" />
+                </a>
+            
+                <a rel='me' href="https:&#x2F;&#x2F;mastodon.social&#x2F;@mgabarda" class="social">
+                    <img alt="mastodon"
+                         src="https://marcosgabarda.com/icons/social/mastodon.svg" />
+                </a>
+            
+                <a rel='me' href="https:&#x2F;&#x2F;unsplash.com&#x2F;es&#x2F;@mgabarda" class="social">
+                    <img alt="unsplash"
+                         src="https://marcosgabarda.com/icons/social/unsplash.svg" />
+                </a>
+            
+        </div>
+    </div>
+
+    <div class="right-nav">
+        
+            <a href=https://marcosgabarda.com/now style="margin-right: 0.5em">now</a>
+        
+            <a href=https://marcosgabarda.com/notes style="margin-right: 0.5em">notes</a>
+        
+            <a href=https://marcosgabarda.com/photos style="margin-right: 0.5em">photos</a>
+        
+            <a href=https://marcosgabarda.com/seeds style="margin-right: 0.5em">seeds</a>
+        
+
+        
+            <button id="search-button"
+                    class="search-button"
+                    title="$SHORTCUT to open search">
+                <img src="https://marcosgabarda.com/icons/search.svg"
+                     alt="Search"
+                     class="search-icon" />
+            </button>
+
+            <div id="searchModal"
+                 class="search-modal js"
+                 role="dialog"
+                 aria-labelledby="modalTitle">
+                <div id="modal-content">
+                    <h1 id="modalTitle" class="page-header">
+                        Search
+                    </h1>
+                    <div id="searchBar">
+                        <input id="searchInput"
+                               role="combobox"
+                               autocomplete="off"
+                               spellcheck="false"
+                               aria-expanded="false"
+                               aria-controls="results-container"
+                               placeholder="Search..." />
+                        <button id="clear-search" class="clear-button" title="Clear search">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+                                <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div id="results-container">
+                        <div id="results-info">
+                            <span id="zero_results" style="display: none;">No results</span>
+                            <span id="one_result" style="display: none;">1 result</span>
+                            <span id="many_results" style="display: none;">$NUMBER results</span>
+                        </div>
+                        <div id="results" role="listbox">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+
+        
+            <a id="dark-mode-toggle"
+               onclick="toggleTheme(); event.preventDefault();"
+               href="#">
+                <img src="https://marcosgabarda.com/icons/sun.svg" id="sun-icon" alt="Light" />
+                <img src="https://marcosgabarda.com/icons/moon.svg"
+                     id="moon-icon"
+                     style="filter: invert(1)"
+                     alt="Dark" />
+                <img src="https://marcosgabarda.com/icons/auto.svg"
+                     id="auto-icon"
+                     style="filter: invert(1)"
+                     alt="Auto" />
+            </a>
+
+            <!-- Initialize the theme toggle icons -->
+            <script>
+                updateItemToggleTheme()
+            </script>
+        
+    </div>
+</nav>
+
+
+            
+            
+    
+    <div class="visible-element-observer-root" data-selector="main article p">
+        <main>
+            <article>
+                <div class="title">
+                    
+                    
+    
+        <div class="page-header">
+            Managing GPG keys
+        </div>
+    
+
+
+                    <div class="meta">
+                        
+                            Posted on <time>2026-01-13</time>
+                        
+
+
+                        
+                            :: Updated on <time>2026-01-14</time>
+                        
+
+                        
+
+                        
+
+                        
+                        
+
+                        
+                        
+
+                        
+                        
+                            <span class="tags-label">::</span>
+                            <span class="tags">
+                                    <a href="https://marcosgabarda.com/tags/computers/"
+                                       class="post-tag">computers</a>
+                                
+                                    <a href="https://marcosgabarda.com/tags/gpg/"
+                                       class="post-tag">gpg</a>
+                                
+                            </span>
+                        
+
+                        
+
+                    </div>
+                </div>
+
+                
+
+                <section class="body">
+                    <p>Long time ago, I tried to use <strong>GnuPG</strong> for singing and encrypting emails. I remember
+uploading some keys to the <a href="https://pgp.mit.edu/">MIT PGP Public Key Server</a> and they
+still exists there!</p>
+<p>Now, I wanted to start to use it again, and keep a healthy and usable public key.</p>
+<h2 id="create-a-public-private-key"><a class="zola-anchor" href="#create-a-public-private-key" aria-label="Anchor link for: create-a-public-private-key">Create a public/private key</a></h2>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>$ gpg --expert --full-gen-key
+</span></code></pre>
+<p>I used this values for creating the key:</p>
+<ul>
+<li>ECC (sign and encrypt)</li>
+<li>Curve 25519</li>
+<li>2 years of expiration time</li>
+</ul>
+<h2 id="list-available-keys"><a class="zola-anchor" href="#list-available-keys" aria-label="Anchor link for: list-available-keys">List available keys</a></h2>
+<p>Once the key pair is created, you can list the available keys:</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>$ gpg --list-sigs
+</span><span>/home/marcos/.gnupg/pubring.kbx
+</span><span>-------------------------------
+</span><span>pub   ed25519 2026-01-13 [SC] [caduca: 2028-01-13]
+</span><span>      0AB25347D0BC94600DE1548B382154DEBCB48AF4
+</span><span>uid        [  absoluta ] Marcos Gabarda &lt;hey@marcosgabarda.com&gt;
+</span><span>sig 3        382154DEBCB48AF4 2026-01-13  [autofirma]
+</span><span>sub   cv25519 2026-01-13 [E] [caduca: 2028-01-13]
+</span><span>sig
+</span></code></pre>
+<p>In this case:</p>
+<ul>
+<li><code>0AB25347D0BC94600DE1548B382154DEBCB48AF4</code> is the fingerprint.</li>
+<li><code>382154DEBCB48AF4</code> is the key ID.</li>
+</ul>
+<h2 id="send-public-key-to-a-public-keyserver"><a class="zola-anchor" href="#send-public-key-to-a-public-keyserver" aria-label="Anchor link for: send-public-key-to-a-public-keyserver">Send public key to a public keyserver</a></h2>
+<p>The public key can be sent to a public keyserver. By default,
+<code>hkps://keys.openpgp.org</code> is used as keyserver:</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>$ gpg --send-key 382154DEBCB48AF4
+</span><span>gpg: enviando clave 382154DEBCB48AF4 a hkps://keys.openpgp.org
+</span></code></pre>
+<p>It's possible to send the public key to a different one:</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>$ gpg --keyserver hkps://keyserver.ubuntu.com --send-key 382154DEBCB48AF4
+</span><span>gpg: enviando clave 382154DEBCB48AF4 a hkps://keyserver.ubuntu.com
+</span></code></pre>
+
+                </section>
+            </article>
+        </main>
+    </div>
+
+
+
+            
+                
+            
+
+            
+        
+        <hr style="margin-top: 2.5em"/>
+        <footer style="font-size: 14px">
+          <p>
+            © <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>
+          </p>
+          <i>Site created with <a href="https://www.getzola.org/">Zola</a> using <a href="https://github.com/not-matthias/apollo">apollo</a> theme</i>
+        </footer>
+        
+        </div>
+
+
+        <div class="right-content">
+            
+    
+    
+        <div class="toc">
+    <div class="heading">
+        Table of Contents
+    </div>
+    <ul class="toc-list">
+        
+            <li class="parent">
+                
+                <a href="https://marcosgabarda.com/notes/gpg/#create-a-public-private-key">Create a public&#x2F;private key</a>
+
+                
+            </li>
+        
+            <li class="parent">
+                
+                <a href="https://marcosgabarda.com/notes/gpg/#list-available-keys">List available keys</a>
+
+                
+            </li>
+        
+            <li class="parent">
+                
+                <a href="https://marcosgabarda.com/notes/gpg/#send-public-key-to-a-public-keyserver">Send public key to a public keyserver</a>
+
+                
+            </li>
+        
+    </ul>
+</div>
+
+    
+
+        </div>
+    </body>
+
+</html>

@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en" class="dark light">
+
+    <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="base" content="https:&#x2F;&#x2F;marcosgabarda.com" />
+
+    
+
+    
+
+    
+    
+    
+        <title>
+            
+                Fixing Minecraft launcher on Debian 13
+            
+        </title>
+
+        
+            <meta property="og:title"
+                  content="Fixing Minecraft launcher on Debian 13" />
+        
+    
+
+    
+        
+            <meta property="og:description" content="hey! I&#x27;m Marcos, and this is my digital garden." />
+        
+    
+
+    
+        
+            <meta name="description" content="hey! I&#x27;m Marcos, and this is my digital garden." />
+        
+    
+
+    
+    
+
+    
+    
+        <link href=https://marcosgabarda.com/fonts.css rel="stylesheet" />
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+        <script defer src=https://marcosgabarda.com/js/toc.js></script>
+    
+
+    
+    
+        <script defer src=https://marcosgabarda.com/js/note.js></script>
+    
+
+    
+
+    
+    
+
+
+    
+    
+        <link rel="stylesheet"
+              type="text/css"
+              href="https://marcosgabarda.com/theme/light.css" />
+        <link id="darkModeStyle"
+              rel="stylesheet"
+              type="text/css"
+              href="https://marcosgabarda.com/theme/dark.css" />
+    
+
+    <!-- Set the correct theme in the script -->
+
+    
+        <script src=https://marcosgabarda.com/js/themetoggle.js></script>
+
+        
+            <script>
+                setTheme(getSavedTheme());
+            </script>
+        
+    
+
+
+    <link rel="stylesheet"
+          type="text/css"
+          media="screen"
+          href="https://marcosgabarda.com/main.css" />
+
+    
+        
+            <link rel="stylesheet" href="https://marcosgabarda.com/fonts.css" />
+        
+            <link rel="stylesheet" href="https://marcosgabarda.com/custom.css" />
+        
+    
+
+    <script defer
+                    src="https://marcosgabarda.com/search_index.en.js?h=8b02159fdecdc9850524"></script>
+        <script defer
+                src="https://marcosgabarda.com/js/searchElasticlunr.min.js?h=3626c0ef99daa745b31e"></script></head>
+
+
+    <body>
+        <div class="left-content">
+            
+            
+        </div>
+
+        <div class="content">
+            <nav>
+    <div class="left-nav">
+        
+            <a href=https:&#x2F;&#x2F;marcosgabarda.com>marcosgabarda.com</a>
+        
+
+
+        <div class="socials">
+            
+                
+            
+            
+                <a rel='me' href="mailto:hey@marcosgabarda.com" class="social">
+                    <img alt="email"
+                         src="https://marcosgabarda.com/icons/social/email.svg" />
+                </a>
+            
+                <a rel='me' href="https:&#x2F;&#x2F;github.com&#x2F;marcosgabarda&#x2F;" class="social">
+                    <img alt="github"
+                         src="https://marcosgabarda.com/icons/social/github.svg" />
+                </a>
+            
+                <a rel='me' href="https:&#x2F;&#x2F;bsky.app&#x2F;profile&#x2F;mgabarda.com" class="social">
+                    <img alt="bluesky"
+                         src="https://marcosgabarda.com/icons/social/bluesky.svg" />
+                </a>
+            
+                <a rel='me' href="https:&#x2F;&#x2F;mastodon.social&#x2F;@mgabarda" class="social">
+                    <img alt="mastodon"
+                         src="https://marcosgabarda.com/icons/social/mastodon.svg" />
+                </a>
+            
+                <a rel='me' href="https:&#x2F;&#x2F;unsplash.com&#x2F;es&#x2F;@mgabarda" class="social">
+                    <img alt="unsplash"
+                         src="https://marcosgabarda.com/icons/social/unsplash.svg" />
+                </a>
+            
+        </div>
+    </div>
+
+    <div class="right-nav">
+        
+            <a href=https://marcosgabarda.com/now style="margin-right: 0.5em">now</a>
+        
+            <a href=https://marcosgabarda.com/notes style="margin-right: 0.5em">notes</a>
+        
+            <a href=https://marcosgabarda.com/photos style="margin-right: 0.5em">photos</a>
+        
+            <a href=https://marcosgabarda.com/seeds style="margin-right: 0.5em">seeds</a>
+        
+
+        
+            <button id="search-button"
+                    class="search-button"
+                    title="$SHORTCUT to open search">
+                <img src="https://marcosgabarda.com/icons/search.svg"
+                     alt="Search"
+                     class="search-icon" />
+            </button>
+
+            <div id="searchModal"
+                 class="search-modal js"
+                 role="dialog"
+                 aria-labelledby="modalTitle">
+                <div id="modal-content">
+                    <h1 id="modalTitle" class="page-header">
+                        Search
+                    </h1>
+                    <div id="searchBar">
+                        <input id="searchInput"
+                               role="combobox"
+                               autocomplete="off"
+                               spellcheck="false"
+                               aria-expanded="false"
+                               aria-controls="results-container"
+                               placeholder="Search..." />
+                        <button id="clear-search" class="clear-button" title="Clear search">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+                                <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div id="results-container">
+                        <div id="results-info">
+                            <span id="zero_results" style="display: none;">No results</span>
+                            <span id="one_result" style="display: none;">1 result</span>
+                            <span id="many_results" style="display: none;">$NUMBER results</span>
+                        </div>
+                        <div id="results" role="listbox">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+
+        
+            <a id="dark-mode-toggle"
+               onclick="toggleTheme(); event.preventDefault();"
+               href="#">
+                <img src="https://marcosgabarda.com/icons/sun.svg" id="sun-icon" alt="Light" />
+                <img src="https://marcosgabarda.com/icons/moon.svg"
+                     id="moon-icon"
+                     style="filter: invert(1)"
+                     alt="Dark" />
+                <img src="https://marcosgabarda.com/icons/auto.svg"
+                     id="auto-icon"
+                     style="filter: invert(1)"
+                     alt="Auto" />
+            </a>
+
+            <!-- Initialize the theme toggle icons -->
+            <script>
+                updateItemToggleTheme()
+            </script>
+        
+    </div>
+</nav>
+
+
+            
+            
+    
+    <div class="visible-element-observer-root" data-selector="main article p">
+        <main>
+            <article>
+                <div class="title">
+                    
+                    
+    
+        <div class="page-header">
+            Fixing Minecraft launcher on Debian 13
+        </div>
+    
+
+
+                    <div class="meta">
+                        
+                            Posted on <time>2025-10-12</time>
+                        
+
+
+                        
+
+                        
+
+                        
+
+                        
+                        
+
+                        
+                        
+
+                        
+                        
+                            <span class="tags-label">::</span>
+                            <span class="tags">
+                                    <a href="https://marcosgabarda.com/tags/computers/"
+                                       class="post-tag">computers</a>
+                                
+                                    <a href="https://marcosgabarda.com/tags/debian/"
+                                       class="post-tag">debian</a>
+                                
+                            </span>
+                        
+
+                        
+
+                    </div>
+                </div>
+
+                
+
+                <section class="body">
+                    <p>I've <a href="https://bsky.app/profile/mgabarda.com/post/3lwrqyjfbps26">updated</a> recently to
+Debian 13 (trixie), and one of the things I have noticed is that is not possible to
+install the official <strong>Minecraft</strong> launcher.</p>
+<p>The error was:</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>Solving dependencies... ¡Error!
+</span><span>No se pudieron instalar algunos paquetes. Esto puede significar que
+</span><span>usted pidió una situación imposible o, si está usando la distribución
+</span><span>inestable, que algunos paquetes necesarios aún no se han creado o se
+</span><span>han sacado de «Incoming».
+</span><span>La siguiente información puede ayudar a resolver la situación:
+</span><span>
+</span><span>Unsatisfied dependencies:
+</span><span> minecraft-launcher : Depende: libgdk-pixbuf2.0-0 (&gt;= 2.22.0) pero no es instalable
+</span><span>Error: No se pudieron corregir los problemas, usted ha retenido paquetes rotos.
+</span><span>Error: The following information from --solver 3.0 may provide additional context:
+</span><span>   Unable to satisfy dependencies. Reached two conflicting decisions:
+</span><span>   1. minecraft-launcher:amd64=2.1.3 is selected for install
+</span><span>   2. minecraft-launcher:amd64 Depende libgdk-pixbuf2.0-0 (&gt;= 2.22.0)
+</span><span>      but none of the choices are installable:
+</span><span>      [no choices]
+</span></code></pre>
+<p>When I look for the missing package, what I found is:</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">sudo</span><span> apt search libgdk-pixbuf
+</span><span>
+</span><span style="color:#bf616a;">...
+</span><span>
+</span><span style="color:#bf616a;">libgdk-pixbuf-2.0-0/stable,now</span><span> 2.42.12+dfsg-4 amd64 </span><span style="color:#b48ead;">[</span><span>instalado, automático</span><span style="color:#b48ead;">]
+</span><span>  </span><span style="color:#bf616a;">biblioteca</span><span> Pixbuf de GDK
+</span></code></pre>
+<p>So, the error is clear! The package <code>libgdk-pixbuf2.0-0</code> required by the official
+package <strong>has been renamed</strong> to <code>libgdk-pixbuf-2.0-0</code>.</p>
+<p>This is what I've done to solve the problem!</p>
+<ol>
+<li>Unpack the original <code>.deb</code> package:</li>
+</ol>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">mkdir</span><span> src/
+</span><span style="color:#bf616a;">dpkg-deb -R</span><span> Minecraft.deb src/
+</span></code></pre>
+<ol start="2">
+<li>Open the file <code>DEBIAN/control</code>:</li>
+</ol>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#96b5b4;">cd</span><span> src/
+</span><span style="color:#bf616a;">nvim</span><span> DEBIAN/control
+</span></code></pre>
+<ol start="3">
+<li>
+<p>Replace <code>libgdk-pixbuf2.0-0</code> with <code>libgdk-pixbuf-2.0-0</code>.</p>
+</li>
+<li>
+<p>Create again the <code>.deb</code> package:</p>
+</li>
+</ol>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">dpkg-deb -b --root-owner-group</span><span> . </span><span style="color:#bf616a;">~</span><span>/Minecraft-fixed.deb
+</span></code></pre>
+<ol start="5">
+<li>And install it!</li>
+</ol>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">sudo</span><span> apt install </span><span style="color:#bf616a;">~</span><span>/Minecraft-fixed.deb
+</span></code></pre>
+
+                </section>
+            </article>
+        </main>
+    </div>
+
+
+
+            
+                
+            
+
+            
+        
+        <hr style="margin-top: 2.5em"/>
+        <footer style="font-size: 14px">
+          <p>
+            © <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>
+          </p>
+          <i>Site created with <a href="https://www.getzola.org/">Zola</a> using <a href="https://github.com/not-matthias/apollo">apollo</a> theme</i>
+        </footer>
+        
+        </div>
+
+
+        <div class="right-content">
+            
+    
+    
+
+        </div>
+    </body>
+
+</html>

@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en" class="dark light">
+
+    <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="base" content="https:&#x2F;&#x2F;marcosgabarda.com" />
+
+    
+
+    
+
+    
+    
+    
+        <title>
+            
+                The importance of following a style guide
+            
+        </title>
+
+        
+            <meta property="og:title"
+                  content="The importance of following a style guide" />
+        
+    
+
+    
+        
+            <meta property="og:description" content="hey! I&#x27;m Marcos, and this is my digital garden." />
+        
+    
+
+    
+        
+            <meta name="description" content="hey! I&#x27;m Marcos, and this is my digital garden." />
+        
+    
+
+    
+    
+
+    
+    
+        <link href=https://marcosgabarda.com/fonts.css rel="stylesheet" />
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+        <script defer src=https://marcosgabarda.com/js/toc.js></script>
+    
+
+    
+    
+        <script defer src=https://marcosgabarda.com/js/note.js></script>
+    
+
+    
+
+    
+    
+
+
+    
+    
+        <link rel="stylesheet"
+              type="text/css"
+              href="https://marcosgabarda.com/theme/light.css" />
+        <link id="darkModeStyle"
+              rel="stylesheet"
+              type="text/css"
+              href="https://marcosgabarda.com/theme/dark.css" />
+    
+
+    <!-- Set the correct theme in the script -->
+
+    
+        <script src=https://marcosgabarda.com/js/themetoggle.js></script>
+
+        
+            <script>
+                setTheme(getSavedTheme());
+            </script>
+        
+    
+
+
+    <link rel="stylesheet"
+          type="text/css"
+          media="screen"
+          href="https://marcosgabarda.com/main.css" />
+
+    
+        
+            <link rel="stylesheet" href="https://marcosgabarda.com/fonts.css" />
+        
+            <link rel="stylesheet" href="https://marcosgabarda.com/custom.css" />
+        
+    
+
+    <script defer
+                    src="https://marcosgabarda.com/search_index.en.js?h=8b02159fdecdc9850524"></script>
+        <script defer
+                src="https://marcosgabarda.com/js/searchElasticlunr.min.js?h=3626c0ef99daa745b31e"></script></head>
+
+
+    <body>
+        <div class="left-content">
+            
+            
+        </div>
+
+        <div class="content">
+            <nav>
+    <div class="left-nav">
+        
+            <a href=https:&#x2F;&#x2F;marcosgabarda.com>marcosgabarda.com</a>
+        
+
+
+        <div class="socials">
+            
+                
+            
+            
+                <a rel='me' href="mailto:hey@marcosgabarda.com" class="social">
+                    <img alt="email"
+                         src="https://marcosgabarda.com/icons/social/email.svg" />
+                </a>
+            
+                <a rel='me' href="https:&#x2F;&#x2F;github.com&#x2F;marcosgabarda&#x2F;" class="social">
+                    <img alt="github"
+                         src="https://marcosgabarda.com/icons/social/github.svg" />
+                </a>
+            
+                <a rel='me' href="https:&#x2F;&#x2F;bsky.app&#x2F;profile&#x2F;mgabarda.com" class="social">
+                    <img alt="bluesky"
+                         src="https://marcosgabarda.com/icons/social/bluesky.svg" />
+                </a>
+            
+                <a rel='me' href="https:&#x2F;&#x2F;mastodon.social&#x2F;@mgabarda" class="social">
+                    <img alt="mastodon"
+                         src="https://marcosgabarda.com/icons/social/mastodon.svg" />
+                </a>
+            
+                <a rel='me' href="https:&#x2F;&#x2F;unsplash.com&#x2F;es&#x2F;@mgabarda" class="social">
+                    <img alt="unsplash"
+                         src="https://marcosgabarda.com/icons/social/unsplash.svg" />
+                </a>
+            
+        </div>
+    </div>
+
+    <div class="right-nav">
+        
+            <a href=https://marcosgabarda.com/now style="margin-right: 0.5em">now</a>
+        
+            <a href=https://marcosgabarda.com/notes style="margin-right: 0.5em">notes</a>
+        
+            <a href=https://marcosgabarda.com/photos style="margin-right: 0.5em">photos</a>
+        
+            <a href=https://marcosgabarda.com/seeds style="margin-right: 0.5em">seeds</a>
+        
+
+        
+            <button id="search-button"
+                    class="search-button"
+                    title="$SHORTCUT to open search">
+                <img src="https://marcosgabarda.com/icons/search.svg"
+                     alt="Search"
+                     class="search-icon" />
+            </button>
+
+            <div id="searchModal"
+                 class="search-modal js"
+                 role="dialog"
+                 aria-labelledby="modalTitle">
+                <div id="modal-content">
+                    <h1 id="modalTitle" class="page-header">
+                        Search
+                    </h1>
+                    <div id="searchBar">
+                        <input id="searchInput"
+                               role="combobox"
+                               autocomplete="off"
+                               spellcheck="false"
+                               aria-expanded="false"
+                               aria-controls="results-container"
+                               placeholder="Search..." />
+                        <button id="clear-search" class="clear-button" title="Clear search">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+                                <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div id="results-container">
+                        <div id="results-info">
+                            <span id="zero_results" style="display: none;">No results</span>
+                            <span id="one_result" style="display: none;">1 result</span>
+                            <span id="many_results" style="display: none;">$NUMBER results</span>
+                        </div>
+                        <div id="results" role="listbox">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+
+        
+            <a id="dark-mode-toggle"
+               onclick="toggleTheme(); event.preventDefault();"
+               href="#">
+                <img src="https://marcosgabarda.com/icons/sun.svg" id="sun-icon" alt="Light" />
+                <img src="https://marcosgabarda.com/icons/moon.svg"
+                     id="moon-icon"
+                     style="filter: invert(1)"
+                     alt="Dark" />
+                <img src="https://marcosgabarda.com/icons/auto.svg"
+                     id="auto-icon"
+                     style="filter: invert(1)"
+                     alt="Auto" />
+            </a>
+
+            <!-- Initialize the theme toggle icons -->
+            <script>
+                updateItemToggleTheme()
+            </script>
+        
+    </div>
+</nav>
+
+
+            
+            
+    
+    <div class="visible-element-observer-root" data-selector="main article p">
+        <main>
+            <article>
+                <div class="title">
+                    
+                    
+    
+        <div class="page-header">
+            The importance of following a style guide
+        </div>
+    
+
+
+                    <div class="meta">
+                        
+                            Posted on <time>2013-05-10</time>
+                        
+
+
+                        
+
+                        
+
+                        
+
+                        
+                        
+
+                        
+                        
+
+                        
+                        
+                            <span class="tags-label">::</span>
+                            <span class="tags">
+                                    <a href="https://marcosgabarda.com/tags/memories/"
+                                       class="post-tag">memories</a>
+                                
+                                    <a href="https://marcosgabarda.com/tags/spanish/"
+                                       class="post-tag">spanish</a>
+                                
+                            </span>
+                        
+
+                        
+
+                    </div>
+                </div>
+
+                
+
+                <section class="body">
+                    <p>Back in 2013, when I was working in my own company <strong>Cuble</strong>, we decided that it could
+be a good idea to wrote some posts about good practices and development. This is other
+post I was able to recovery thanks to <a href="https://web.archive.org/">Wayback Machine</a>.</p>
+<p>This is the original post.</p>
+<blockquote>
+<p>"Cualquiera puede escribir código que un ordenador entiende. Los buenos programadores escriben código que los humanos pueden entender"</p>
+<p><strong>Martin Fowler</strong></p>
+<p>La importancia de trabajar apoyados en una guía de estilo. El código se lee más veces de las que se escribe. A veces se puede caer en la tentación de escribir el código que simplemente funcione, sin pararnos a pensar en su legibilidad o de cuanto le costaría a alguien entenderlo sólo leyendo lo que hemos escrito. Empiezas un proyecto nuevo,  y entre función y función, clase y clase, vas cambiando de estilo y entre lo que estás escribiendo ahora mismo y lo primero que empezaste a escribir deja la sensación de que ha estado escribiendo en tu código más de una persona. O puede que tomes el proyecto que haya empezado otra persona, que no lo ha podido terminar, ves como está escrito, no te gusta su estilo y decides aplicar tu toque personal.</p>
+<p>Con el paso del tiempo te das cuenta del error que cometiste no siguiendo una guía de estilo clara. Cuando tienes que corregir un bug que aparece en las primeras líneas de código que escribiste. O cuando tienes que entender un fragmento de código escrito por otras personas donde cada variable sigue un estilo distinto para ponerle nombre y una indentación que hace imposible saber a primera vista donde termina un bloque y empieza otro.</p>
+<p><strong>Precisamente, para evitar estos momentos de frustración nos gustaría dar algunas recomendaciones.</strong></p>
+<h2 id="python"><a class="zola-anchor" href="#python" aria-label="Anchor link for: python">Python</a></h2>
+<p>Si trabajas con Python, es indispensable seguir el famoso <a href="http://www.python.org/dev/peps/pep-0008/">PEP 8</a>, la guía de estilo que se siguen las librerías estándar de Python. Además de tener siempre en mente el Zen de Python:</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>Python 2.7.3 (default, Sep 26 2012, 21:51:14)
+</span><span>[GCC 4.7.2] on linux2
+</span><span>Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;license&quot; for more information.
+</span><span>&gt;&gt;&gt; import this
+</span><span>The Zen of Python, by Tim Peters
+</span><span>Beautiful is better than ugly.
+</span><span>Explicit is better than implicit.
+</span><span>Simple is better than complex.
+</span><span>Complex is better than complicated.
+</span><span>Flat is better than nested.
+</span><span>Sparse is better than dense.
+</span><span>Readability counts.
+</span><span>Special cases aren&#39;t special enough to break the rules.
+</span><span>Although practicality beats purity.
+</span><span>Errors should never pass silently.
+</span><span>Unless explicitly silenced.
+</span><span>In the face of ambiguity, refuse the temptation to guess.
+</span><span>There should be one-- and preferably only one --obvious way to do it.
+</span><span>Although that way may not be obvious at first unless you&#39;re Dutch.
+</span><span>Now is better than never.
+</span><span>Although never is often better than *right* now.
+</span><span>If the implementation is hard to explain, it&#39;s a bad idea.
+</span><span>If the implementation is easy to explain, it may be a good idea.
+</span><span>Namespaces are one honking great idea -- let&#39;s do more of those!
+</span><span>&gt;&gt;&gt;
+</span></code></pre>
+<p>Si trabajas con Django, también es interesante echarle un ojo a su guía de estilo, que se complementa perfectamente con el PEP 8.</p>
+<h2 id="php"><a class="zola-anchor" href="#php" aria-label="Anchor link for: php">PHP</a></h2>
+<p>Si trabajas con PHP unas guías de estilo muy recomendables para seguir son los propuestos por el Framework Interop Group, y que puedes ver en estos repositorios de GitHub:</p>
+<ul>
+<li>PSR-0</li>
+<li>PSR-1</li>
+<li>PSR-2</li>
+<li>PSR-3</li>
+</ul>
+<p>Estos documentos son inclusivos, por lo que si decides seguir el PSR-1, también deberías de cumplir el PSR-0, si decides seguir el PS2 tienes que cumplir también el PSR-1 y el PSR-0, y así sucesivamente.</p>
+<h2 id="conclusion"><a class="zola-anchor" href="#conclusion" aria-label="Anchor link for: conclusion">Conclusión</a></h2>
+<p>Si empiezas un nuevos proyecto, ya sea para ti sólo o en un equipo, empieza siempre siguiendo unas guías de estilo, lo agradecerás. Lee código, es uno de los mejores consejos que puede recibir alguien para mejorar como programador, ver como escriben grandes profesionales de la industria, y que gracias al Open Source no tienes excusa para cumplir.  Y recuerda que al final, lo más importante es mantener la coherencia entre todo el código del proyecto. Si tienes que continuar un proyecto que está ya empezado, sigue las convenciones que se utilicen en éste, aunque no sean las que hubieras escogido, ya que la legibilidad siempre debe prevalecer.</p>
+</blockquote>
+<p>In the end, we had to close the company. Is was a hard time for me, but, there are a
+lot of lessons learning you can get from the failure, and that was the case.</p>
+
+                </section>
+            </article>
+        </main>
+    </div>
+
+
+
+            
+                
+            
+
+            
+        
+        <hr style="margin-top: 2.5em"/>
+        <footer style="font-size: 14px">
+          <p>
+            © <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>
+          </p>
+          <i>Site created with <a href="https://www.getzola.org/">Zola</a> using <a href="https://github.com/not-matthias/apollo">apollo</a> theme</i>
+        </footer>
+        
+        </div>
+
+
+        <div class="right-content">
+            
+    
+    
+        <div class="toc">
+    <div class="heading">
+        Table of Contents
+    </div>
+    <ul class="toc-list">
+        
+            <li class="parent">
+                
+                <a href="https://marcosgabarda.com/notes/style-guide/#python">Python</a>
+
+                
+            </li>
+        
+            <li class="parent">
+                
+                <a href="https://marcosgabarda.com/notes/style-guide/#php">PHP</a>
+
+                
+            </li>
+        
+            <li class="parent">
+                
+                <a href="https://marcosgabarda.com/notes/style-guide/#conclusion">Conclusión</a>
+
+                
+            </li>
+        
+    </ul>
+</div>
+
+    
+
+        </div>
+    </body>
+
+</html>
